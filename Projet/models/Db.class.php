@@ -27,7 +27,8 @@ class Db
 
 	public function valid_teacher($login,$password){
 		$query = 'SELECT * from teachers WHERE login='.$this->_db->quote($login).' AND password='.$this->_db->quote(sha1($password));
-		$result = $this->_db->query($query);
+		var_dump($query);
+        $result = $this->_db->query($query);
 		$authenticated = false;
 		if ($result->rowcount()!=0) {
 			$authenticated = true;

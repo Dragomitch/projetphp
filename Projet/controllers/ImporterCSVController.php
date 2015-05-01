@@ -3,19 +3,26 @@ class ImporterCSVController{
 	public function __construct(){
 		
 	}
-public function run(){
 
+    /**
+     *
+     */
+    public function run(){
 
-			$rep = 'CSV/';
+         $rep = 'CSV/';
 		 $teachers = 'professeurs.csv';
 		 $students ='etudiants.csv';
 		 
  
 	$this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');
 	
- 
-	//Access path 
-	$file_teacher = fopen($rep.$teachers, "r");
+    if(isset($_FILES['CSVfile'])){
+        var_dump($_FILES['CSVfile']);
+    }else{
+        echo 'coucou';
+    }
+	//Access path
+	$file_teacher   = fopen($rep.$teachers, "r");
  	
 	//tant qu'on est pas a la fin du fichier :
 	while (!feof($file_teacher))
@@ -25,7 +32,7 @@ public function run(){
 	
 	//On met dans un tableau les differentes valeurs trouvés (ici séparées par un ';')
 	$tableauValeurs = explode(';', $uneLigne);
-	// On crée la requete pour inserer les donner 
+	// On crée la requete pour inserer les donnees
 	//$sql="INSERT IGNORE INTO 'teachers' ('login', 'first_name', 'last_name', 'password') VALUES ('".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."','.NULL')";
  	$sql="INSERT IGNORE INTO 'teachers' ('login', 'first_name', 'last_name') VALUES (':login', ':first_name', ':last_name')";
 	$this->_db->prepare($sql)->execute();
@@ -39,7 +46,7 @@ public function run(){
 	
 		//On met dans un tableau les differentes valeurs trouvés (ici séparées par un ';')
 		$tableauValeurs = explode(';', $uneLigne);
-		// On crée la requete pour inserer les donner
+		// On crée la requete pour inserer les donnees
 		try{ 
 			//$sql="INSERT IGNORE INTO 'students' ('login', 'first_name', 'last_name', 'password','last_connection') VALUES ('".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."','.NULL.','.NULL')";
 			$sql="INSERT IGNORE INTO 'students' ('login', 'first_name', 'last_name') VALUES (':login', ':first_name', ':last_name')";
