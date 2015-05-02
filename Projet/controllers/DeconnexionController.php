@@ -1,5 +1,5 @@
 <?php
-class LogoutController{
+class DeconnexionController{
 
 	public function __construct() {
 

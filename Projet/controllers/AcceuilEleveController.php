@@ -1,6 +1,6 @@
 <?php
 
-class AccueilEleveController{
+class AcceuilEleveController{
 
 	public function __construct() {
 

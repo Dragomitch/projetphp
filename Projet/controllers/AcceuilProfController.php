@@ -1,5 +1,5 @@
 <?php
-class AccueilProfController{
+class AcceuilProfController{
 
 	public function __construct() {
 

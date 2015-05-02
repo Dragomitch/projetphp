@@ -19,12 +19,12 @@
 										<ul>
 											<li class="current_page_item"><a href="index.html">Home</a></li>
 											<li>
-												<a href="#">Modification Exercices</a>
+												<a href="index.php?action=modifExercice">Modification Exercices</a>
 											</li>
-											<li><a href="#">Liste Etudiants</a></li>
-											<li><a href="#">Exporter CSV</a></li>
-											<li><a href="#">Importer CSV</a></li>
-											<li><a href="#">Deconnexion</a></li>
+											<li><a href="index.php?action=studentList">Liste Etudiants</a></li>
+											<li><a href="index.php?action=ExportCSV">Exporter CSV</a></li>
+											<li><a href="index.php?action=importCSV">Importer CSV</a></li>
+											<li><a href="index.php?action=logout">Deconnexion</a></li>
 										</ul>
 									</nav>
 							

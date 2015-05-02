@@ -16,10 +16,10 @@
 											<li>IAnArch</li>
 											<li class="current_page_item"><a href="index.html">Home</a></li>
 											<li>
-												<a href="exercices.php">Exercices</a>
+												<a href="index.php?action=exercices">Exercices</a>
 											</li>
-											<li><a href="statetudiant.php">Profil</a></li>
-											<li><a href="login.php">Deconnexion</a></li>
+											<li><a href="index.php?action=studentStat">Profil</a></li>
+											<li><a href="index.php?action=logout">Deconnexion</a></li>
 										</ul>
 									</nav>
 							

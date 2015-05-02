@@ -14,7 +14,7 @@
 	
 	# Require des classes automatisé pour la partie modèle de l'architecture
 	function chargerClasse($classe) {
-		require 'models/' . $classe . '.class.php';
+		if(is_readable('models/'.$classe.'.class.php'))require 'models/' . $classe . '.class.php';
 	}
 	spl_autoload_register('chargerClasse'); 
 
