@@ -17,7 +17,7 @@
 								<!-- Nav -->
 									<nav id="nav">
 										<ul>
-											<li class="current_page_item"><a href="index.html">Home</a></li>
+											<li class="current_page_item"><a href="index.php?action=homeTeacher">Home</a></li>
 											<li>
 												<a href="index.php?action=modifExercice">Modification Exercices</a>
 											</li>

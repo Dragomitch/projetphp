@@ -49,7 +49,7 @@ class Db
 	public function update_mdp_Student($matricule,$password) {
 		$query = 'UPDATE students SET password= '.$this->_db->quote(sha1($password)).' WHERE matricule=' .$this->_db->quote($matricule).'';
 		$this->_db->prepare($query)->execute();
-	
+	#toDo secure password modification !
 	}
 	
 				
@@ -65,7 +65,7 @@ class Db
 		$result =$this->_db->query($query);
 		if ($result->rowcount()!=0) {
 			while ($row = $result->fetch()) {
-				$tableau[] = new Utilisateur($row->matricule,$row->first_name,$row->last_name,$row->password,$row->last_connection);
+				$tableau[] = new Student($row->matricule,$row->first_name,$row->last_name,$row->password);
 						}
 		}
 		

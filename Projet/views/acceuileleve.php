@@ -14,7 +14,7 @@
 									<nav id="nav">
 										<ul>
 											<li>IAnArch</li>
-											<li class="current_page_item"><a href="index.html">Home</a></li>
+											<li class="current_page_item"><a href="index.php?action=homeStudent">Home</a></li>
 											<li>
 												<a href="index.php?action=exercices">Exercices</a>
 											</li>

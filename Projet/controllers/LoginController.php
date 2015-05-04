@@ -5,8 +5,14 @@ class LoginController {
 	public function run() {
 		// Si un distrait écrit ?action=login en étant déjà authentifié
 		if (! empty ( $_SESSION ['authentifie'] )) {
+				if($_SESSION ['type'] == 'student'){
+					header("Location: index.php?action=homeStudent");
+				}elseif ($_SESSION ['type'] == 'teacher'){
+					header("Location: index.php?action=homeTeacher");
+				}else {
 			header ( "Location: index.php?action=login" ); // redirection HTTP vers l'action login
 			die ();
+				}
 		}
 		
 		// Variables HTML dans la vue
@@ -22,6 +28,7 @@ class LoginController {
 			// Une variable de session $_SESSION['authenticated'] est créée
 			$_SESSION ['authentifie'] = 'autorise';
 			$_SESSION ['login'] = $_POST ['login'];
+			$_SESSION ['type']= 'student';
 			// Redirection HTTP pour demander la page admin
 			header ( "Location: index.php?action=homeStudent" );
 			die ();
@@ -32,6 +39,7 @@ class LoginController {
 			// Une variable de session $_SESSION['authenticated'] est créée
 			$_SESSION ['authentifie'] = 'autorise';
 			$_SESSION ['login'] = $_POST ['login'];
+			$_SESSION ['type'] ='teacher';
 			// Redirection HTTP pour demander la page admin
 			header ( "Location: index.php?action=homeTeacher" );
 			die ();
