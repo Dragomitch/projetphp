@@ -19,6 +19,6 @@ class ListeEtudiantController{
 
 
 
-        require_once(PATH_VIEWS . 'listeetudiant.php') ;
+        require_once(PATH_VIEWS . 'listeetudiant.php');
     }
 }
