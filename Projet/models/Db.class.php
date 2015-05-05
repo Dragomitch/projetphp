@@ -7,7 +7,7 @@ class Db
     private function __construct()
     {
         try {
-            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');
+            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
         } 
@@ -23,6 +23,28 @@ class Db
             self::$instance = new Db();
         }
         return self::$instance;
+    }
+
+        public function insertTeacher($array) {
+
+        $sql="INSERT INTO teachers (login, first_name, last_name) VALUES (:login, :first_name, :last_name)";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindParam(':login', $array[0]);
+        $stmt->bindParam(':first_name', $array[1]);
+        $stmt->bindParam(':last_name', $array[2]);
+        $stmt->execute();
+
+    }
+
+    public function insertStudent($array){
+
+        $sql="INSERT INTO students (matricule, first_name, last_name) VALUES (:matricule, :first_name, :last_name)";
+        $stmt= $this->_db->prepare($sql);
+        $stmt->bindParam(':matricule', $array[0]);
+        $stmt->bindParam(':first_name', $array[1]);
+        $stmt->bindParam(':last_name', $array[2]);
+        $stmt->execute();
+
     }
 
 	public function valid_teacher($login,$password){

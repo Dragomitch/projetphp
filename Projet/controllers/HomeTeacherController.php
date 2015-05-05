@@ -1,8 +1,7 @@
 <?php
+class HomeTeacherController{
 
-class ExporterCSVController{
-
-    public function __construct(){
+    public function __construct() {
 
     }
 
@@ -14,10 +13,9 @@ class ExporterCSVController{
             header ( "Location: index.php?action=homeStudent" ); // redirection HTTP vers l'action login
             die ();
         }
-
-
+        # Un contrôleur se termine en écrivant une vue
+        require_once(PATH_VIEWS . 'acceuilprof.php');
     }
 
 }
-
 ?>

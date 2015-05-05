@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS sitephp;
+﻿CREATE DATABASE IF NOT EXISTS sitephp DEFAULT COLLATE = utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS sitephp.students(
 	matricule			INTEGER		auto_increment	PRIMARY KEY,

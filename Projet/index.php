@@ -10,19 +10,16 @@
 	// constante(s)
 	define ('PATH_VIEWS', 'views/' );
 	define('MAIL','grimmonpre.romain@gmail.com');	
-		$date = date("j/m/Y");
-	
-	# Require des classes automatisé pour la partie modèle de l'architecture
-	function chargerClasse($classe) {
-		require 'models/' . $classe . '.class.php';
-	}
-	spl_autoload_register('chargerClasse'); 
+    $date = date("j/m/Y");
 
-	#importer csv
-	#require_once ('controllers/ImporterCSVController.php');
-	#$controllerCSV=new ImporterCSVController();
-	#$controllerCSV->run();
-	
+
+    # Require des classes automatisé pour la partie modèle de l'architecture
+    function chargerClasse($classe) {
+        if(is_readable('models/'.$classe.'.class.php'))require 'models/' . $classe . '.class.php';
+        else   var_dump($classe);
+    }
+    spl_autoload_register('chargerClasse');
+
 	# Ecrire ici le header de toutes pages HTML
 	require_once (PATH_VIEWS . 'header.php');
 	
@@ -38,8 +35,8 @@
 			$controller = new AcceuilEleveController();
 			break;
 		case 'homeTeacher':
-			require_once('controllers/AcceuilProfController.php');	
-			$controller = new AcceuilProfController();
+			require_once('controllers/HomeTeacherController.php');
+			$controller = new HomeTeacherController();
 			break;
 		case 'logout':	
 			require_once('controllers/DeconnexionController.php');
@@ -62,9 +59,13 @@
 			$controller = new FirstLoginController();
 			break;	
 		case 'importCSV':
-			require_once('controllers/ImporterCSVController.php');
-			$controller = new ImporterCSVController();
+			require_once('controllers/ImportCSVController.php');
+			$controller = new ImportCSVController();
 			break;
+        case 'uploadCSV':
+            require_once('controllers/UploadCVSController.php');
+            $controller= new UploadCSVController();
+            break;
 		case 'studentList':
 			require_once('controllers/ListeEtudiantController.php');
 			$controller = new ListeEtudiantController();
