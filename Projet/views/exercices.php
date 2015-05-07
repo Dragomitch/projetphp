@@ -3,47 +3,87 @@
 <head>
 <body class="homepage">
 
-<!-- Header -->
-<div id="header-wrapper">
-    <div class="container">
+	<!-- Header -->
+	<div id="header-wrapper">
+		<div class="container">
 
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
+			<!-- Header -->
+						<header id="header">
+							<div class="inner">
+							
+								
+								<!-- Nav -->
+									<nav id="nav">
+										<ul>
+											<li>IAnArch</li>
+											<li class="current_page_item"><a href="index.php?action=homeStudent">Home</a></li>
+											<li>
+												<a href="index.php?action=exercices">Exercices</a>
+											</li>
+											<li><a href="index.php?action=studentStat">Profil</a></li>
+											<li><a href="index.php?action=logout">Deconnexion</a></li>
+										</ul>
+									</nav>
+							
+							</div>
+						</header>
+		
 
-                <!-- Logo -->
-                <h1><a href="index.html" id="logo">Ianarch</a></h1>
+			<?php $i=0?>
+			
+			<div id="form3">
+				<form action="index.php?action=exercices&nr_question="<?php  ?>" id="raccourci" method="get">
+					<p>
+						<input type="hidden" name="module" /> <input type="text"
+							id="direct" name="nr_question" /><input id="go" type="submit"
+							value="Go" />
+					</p>
+				</form>
+				<form action="index.php?action=exercices&nr_question=<?php  ?>" method="get" id="precedent">
+					<p>
+						<input type="hidden" name="module" value="niv" /> <input
+							type="hidden" name="nr_question"
+							value="<?php ?>" /> <input
+							type="submit" value="&lt;" />
+					</p>
+				</form>
+				<form action="index.php?action=exercices&nr_question=<?php  ?>" method="get" id="suivant">
+					<p>
+						<input type="hidden" name="module" value="niveau1" /> <input
+							type="hidden" name="nr_question"
+							value="<?php ?>" /> <input
+							type="submit" value="&gt;" />
+					</p>
+				</form>
+			</div>
+			<div id="contenu">
+				
+				<h2>
+					<span class="html">Niveau <?php echo $tabexercises[$i]->num_level(); ?></span>
+				</h2>
+				<h2>
+					<span class="html">Question <?php echo $tabexercises[$i]->num_exercise(); ?></span>
+				</h2>
 
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li class="current_page_item"><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="">Exercices</a>
-                        </li>
-                        <li><a href="left-sidebar.html">Profil</a></li>
-                        <li><a href="no-sidebar.html">Deconnexion</a></li>
-                    </ul>
-                </nav>
+				<p>
+					<span class="html"><?php echo $tabexercises[$i]->query(); ?></span>
+				</p>
 
-            </div>
-        </header>
+					
+<!-- 				<a id="niveau" href="images/niveau1.jpg"><img -->
+<!-- 					src="images/tn_niveau1.jpg" alt="DSD niveau1" -->
+<!-- 					title="Cliquez pour agrandir" /></a> -->
 
-        <!-- Banner -->
-        <div id="banner">
-            <h2><strong>Le cours d'IAnArch :</strong>
-                <ul>
-                    <li>Introduction au SQL</li>
-                    <li>Introduction à la conception de données</li>
-                </ul>
-                </p>
-            </h2>
+					<form action="" method="post">
+						<p>
+							<textarea rows="6" cols="65" name="SolReq">SELECT </textarea>
+						</p>
+						<p class="droite">
+							<input type="submit" value="Exécuter" />
+						</p>
+					</form>
+				</div>
+				<h2>Réponse</h2>
+			</div>
 
-            <p>Ce site sert de support aux séances d'exercices liées à la première partie sur le SQL.</p>
-
-        </div>
-
-    </div>
-</div>
-
-</head>
+			</head>
