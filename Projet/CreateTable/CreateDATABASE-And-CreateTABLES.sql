@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS sitephp.teachers(
 
 CREATE TABLE IF NOT EXISTS sitephp.levels(
 	level 				INTEGER			auto_increment PRIMARY KEY,
+	num_level 			INTEGER			NOT NULL,
 	label				VARCHAR(20)		NOT NULL
 )ENGINE=InnoDB;
 
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 
 -- Changer dans answer_students le Char(100) en VARCHAR(100)
 -- Vérifier la relation qu'il faut entre students_answer et exercises.(	et donc si number doit également être FK)
--- Un exercice peut être ne pas avoir de niveau attribué ? -- Je considère que oui
+-- Un exercice peut être ne pas avoir de niveau attribué ? Obligatoirement
 -- Un author peut être null dans exercises. Enlever NN et gras.
 -- Supprimer la FK  de levels
 -- Rajouter un numero d'excercice dans exercises pour pouvoir différencier deux exercices de même niveau	

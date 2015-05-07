@@ -99,6 +99,18 @@ class ImportCSVController{
                         Db::getInstance()->insertTeacher($valuesTable);
                     }
                 }
+            }elseif (preg_match('/num;theme;enonce;query;nb/', $file[0])) {
+                if(empty($_POST['level_num'])){
+                    $notification= "If you import queries you need to specify the number of the level for that exercises";
+                }else{
+                    if($_POST['level_num'])
+                    foreach ($file as $index => $queryData) {
+                        if($index> 0){
+                            $valuesTable= explode(';', $queryData);
+                            new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+                        }
+                    }
+                }
             }else{
                 $notification= "The file must be a valid CSV file";
             }

@@ -47,6 +47,14 @@ class Db
 
     }
 
+	public function getLevels(){
+		
+	}
+	#public function insertQuery($exercise){
+    #	new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+
+    #}
+
 	public function valid_teacher($login,$password){
 		$query = 'SELECT * from teachers WHERE login='.$this->_db->quote($login).' AND password='.$this->_db->quote(sha1($password));
 		var_dump($query);
