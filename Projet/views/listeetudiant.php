@@ -1,6 +1,6 @@
 <title>Signin IAnArch</title>
 
-<head>
+</head>
 	<body class="homepage">
 
 		<!-- Header -->
@@ -12,23 +12,10 @@
 							<div class="inner">
 							
 								<!-- Logo -->
-									<h1><a href="index.html" id="logo">Ianarch</a></h1>
+									<h1><a href="index.php" id="logo">Ianarch</a></h1>
 								
 								<!-- Nav -->
-									<nav id="nav">
-										<ul>
-											<li class="current_page_item"><a href="index.php?action=homeTeacher">Home</a></li>
-											<li>
-												<a href="index.php?action=modifExercice">Modification Exercices</a>
-											</li>
-											<li><a href="index.php?action=studentList">Liste Etudiants</a></li>
-											<li><a href="index.php?action=ExportCSV">Exporter CSV</a></li>
-											<li><a href="index.php?action=importCSV">Importer CSV</a></li>
-											<li><a href="index.php?action=logout">Deconnexion</a></li>
-										</ul>
-									</nav>
-							
-							</div>
+							<?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
 						</header>
 
 					<!-- Banner -->
@@ -58,4 +45,4 @@
 				</div>
 			</div>
 
-</head>
+

@@ -12,7 +12,7 @@
 							<div class="inner">
 							
 								<!-- Logo -->
-									<h1><a href="index.html" id="logo">Ianarch</a></h1>
+									<h1><a href="index.php" id="logo">Ianarch</a></h1>
 								
 								<!-- Nav -->
 									<?php require_once(PATH_VIEWS.'headerteachers.php'); ?>

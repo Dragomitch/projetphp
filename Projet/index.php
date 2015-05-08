@@ -50,9 +50,13 @@
 			require_once('controllers/LoginController.php');	
 			$controller = new LoginController();
 			break;	
+		case 'level':
+			require_once('controllers/LevelController.php');	
+			$controller = new LevelController();
+			break;
 		case 'exercices':
-			require_once('controllers/ExercisesController.php');	
-			$controller = new ExercisesController();
+			require_once ('controllers/ExercisesController.php');
+			$controller = new ExercisesController();	
 			break;
 		case 'first':
 			require_once('controllers/FirstLoginController.php');	

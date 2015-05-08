@@ -94,13 +94,25 @@ class Db
 		return $tableau;
 	}
 	
-	public function select_exercise($num){
-		$query = 'SELECT * FROM exercises where num_exercise='.$this->_db->quote($num).'';
+	public function select_exercise($level){
+		$query = 'SELECT * FROM exercises where num_level='.$this->_db->quote($level).'';
 		$tableau = array();
 		$result =$this->_db->query($query);
 		if ($result->rowcount()!=0) {
 			while ($row = $result->fetch()) {
 				$tableau[] = new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+			}
+		}
+	
+		return $tableau;
+	}
+	public function select_level(){
+		$query = 'SELECT * FROM levels';
+		$tableau = array();
+		$result =$this->_db->query($query);
+		if ($result->rowcount()!=0) {
+			while ($row = $result->fetch()) {
+				$tableau[] = new Levels($row->label,$row->level);
 			}
 		}
 	

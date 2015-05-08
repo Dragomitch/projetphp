@@ -18,7 +18,7 @@
 											<li>IAnArch</li>
 											<li class="current_page_item"><a href="index.php?action=homeStudent">Home</a></li>
 											<li>
-												<a href="index.php?action=exercices">Exercices</a>
+												<a href="index.php?action=level">Niveau</a>
 											</li>
 											<li><a href="index.php?action=studentStat">Profil</a></li>
 											<li><a href="index.php?action=logout">Deconnexion</a></li>
@@ -29,29 +29,28 @@
 						</header>
 		
 
-			<?php $i=0?>
 			
 			<div id="form3">
-				<form action="index.php?action=exercices&nr_question="<?php  ?>" id="raccourci" method="get">
+				<form action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>" id="raccourci" method="post">
 					<p>
 						<input type="hidden" name="module" /> <input type="text"
 							id="direct" name="nr_question" /><input id="go" type="submit"
 							value="Go" />
 					</p>
 				</form>
-				<form action="index.php?action=exercices&nr_question=<?php  ?>" method="get" id="precedent">
+				<form action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>" method="post" id="precedent">
 					<p>
 						<input type="hidden" name="module" value="niv" /> <input
-							type="hidden" name="nr_question"
-							value="<?php ?>" /> <input
+							type="hidden" name="nr_question_precedent"
+							value="<?php echo $tabexercises[$i]->num_exercise()?>" /> <input
 							type="submit" value="&lt;" />
 					</p>
 				</form>
-				<form action="index.php?action=exercices&nr_question=<?php  ?>" method="get" id="suivant">
+				<form action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>" method="post" id="suivant">
 					<p>
 						<input type="hidden" name="module" value="niveau1" /> <input
-							type="hidden" name="nr_question"
-							value="<?php ?>" /> <input
+							type="hidden" name="nr_question_suivant"
+							value="<?php echo $tabexercises[$i]->num_exercise()?>" /> <input
 							type="submit" value="&gt;" />
 					</p>
 				</form>
@@ -66,7 +65,7 @@
 				</h2>
 
 				<p>
-					<span class="html"><?php echo $tabexercises[$i]->query(); ?></span>
+					<span class="html"><?php echo $tabexercises[$i]->statement(); ?></span>
 				</p>
 
 					
@@ -84,6 +83,9 @@
 					</form>
 				</div>
 				<h2>Réponse</h2>
+				<p>
+				<span class="html"><?php echo $tabexercises[$i]->query(); ?></span>
+				</p>
 			</div>
 
 			</head>
