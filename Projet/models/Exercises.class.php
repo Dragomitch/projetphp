@@ -24,8 +24,6 @@ class Exercises{
 		$this->_theme=$theme;	
 	}
 
-	public function __construct($num)
-
 	#author peut etre null
 	#num_exercise est le numero de l'exercice dans le niveau
 	#num_level doit etre attribue

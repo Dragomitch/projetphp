@@ -78,7 +78,10 @@
 			require_once('controllers/StatEtudiantController.php');
 			$controller = new StatEtudiantController();
 			break;
-		
+		case 'exercices':
+			require_once ('controllers/ExercisesController.php');
+			$controller = new ExercisesController();
+			break;		
 		default: # Par défaut, le contrôleur de l'accueil est sélectionné
 			require_once('controllers/LoginController.php');	
 			$controller = new LoginController();

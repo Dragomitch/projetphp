@@ -53,4 +53,4 @@ CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 -- Un exercice peut être ne pas avoir de niveau attribué ? Obligatoirement
 -- Un author peut être null dans exercises. Enlever NN et gras.
 -- Supprimer la FK  de levels
--- Rajouter un numero d'excercice dans exercises pour pouvoir différencier deux exercices de même niveau	
+-- Rajouter un numero d'excercice dans exercises pour pouvoir différencier deux exercices de même niveau qui doit être renseigné ( NN)

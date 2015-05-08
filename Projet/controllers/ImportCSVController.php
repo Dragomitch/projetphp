@@ -103,12 +103,24 @@ class ImportCSVController{
                 if(empty($_POST['level_num'])){
                     $notification= "If you import queries you need to specify the number of the level for that exercises";
                 }else{
-                    if($_POST['level_num'])
+                    if($_POST['level_num'])//TODO vérifier que le numero n'existe 
                     foreach ($file as $index => $queryData) {
                         if($index> 0){
                             $valuesTable= explode(';', $queryData);
-                            new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
-                        }
+                            #num numéro du query
+                            #theme information complémentaire ( peut être NULL)
+                            #enonce enonce de la question
+                            #query reponse de la question ( query)
+                            #nb nbr de lignes resultant du query
+
+                            foreach ($valuesTable as $index => $contenuCase) {
+                                if($contenuCase== ''){
+                                    $contenuCase= 'NULL';
+                                }
+                            }
+
+                            new Exercises('NULL','NULL','NULL',$valuesTable[3],$valuesTable[4],'NULL','NULL',$valuesTable[0],$valuesTable[2],$valuesTable[1]);
+                        }//TODO créer de bon exercices
                     }
                 }
             }else{

@@ -12,15 +12,31 @@ class ExercisesController{
             header ( "Location: index.php?action=homeTeacher" ); // redirection HTTP vers l'action login
             die ();
         }
-        #default value = 1
-        $num=1;
-        if (isset($_GET)){
-        	if (!empty($_GET['nr_question'])){
-        		$num=htmlentities($_GET['nr_question']);
+
+        $level= htmlentities($_GET['level']);
+        $tabexercises=Db::getInstance()->select_exercise($level);
+        
+        $i=0;
+        if (isset($_POST)){
+        	if (!empty($_POST['nr_question'])){
+        		$i=htmlentities($_POST['nr_question'])-1;
+        	}
+        	elseif (!empty($_POST['nr_question_suivant'])){
+        		if($_POST['nr_question_suivant']==count($tabexercises)){
+        			$i=0;
+        		}else{
+
+            		$i=$_POST['nr_question_suivant'];
+                }
+        	}
+        	elseif (!empty($_POST['nr_question_precedent'])){
+        		if ($_POST['nr_question_precedent']==1){
+        			$i=count($tabexercises)-1;
+        		}else{
+        			$i=$_POST['nr_question_precedent']-2;
+        		}
         	}
         }
-        
-        $tabexercises=Db::getInstance()->select_exercise($num);
         
         #call the view
         require_once (PATH_VIEWS .'exercices.php');

@@ -47,13 +47,10 @@ class Db
 
     }
 
-	public function getLevels(){
-		
-	}
-	#public function insertQuery($exercise){
-    #	new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+	public function insertQuery($exercise, $num_level){
+    	new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
 
-    #}
+    }
 
 	public function valid_teacher($login,$password){
 		$query = 'SELECT * from teachers WHERE login='.$this->_db->quote($login).' AND password='.$this->_db->quote(sha1($password));
@@ -102,13 +99,26 @@ class Db
 		return $tableau;
 	}
 	
-	public function select_exercise($num){
-		$query = 'SELECT * FROM exercises where num_exercise='.$this->_db->quote($num).'';
+	public function select_exercise($level){
+		$query = 'SELECT * FROM exercises where num_level='.$this->_db->quote($level).'';
 		$tableau = array();
 		$result =$this->_db->query($query);
 		if ($result->rowcount()!=0) {
 			while ($row = $result->fetch()) {
 				$tableau[] = new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+			}
+		}
+	
+		return $tableau;
+	}
+
+	public function select_level(){
+		$query = 'SELECT * FROM levels';
+		$tableau = array();
+		$result =$this->_db->query($query);
+		if ($result->rowcount()!=0) {
+			while ($row = $result->fetch()) {
+				$tableau[] = new Levels($row->label,$row->level);
 			}
 		}
 	
