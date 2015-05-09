@@ -7,7 +7,7 @@ class Db
     private function __construct()
     {
         try {
-            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');#210993
+            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');#210993
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
         } 
@@ -27,28 +27,41 @@ class Db
 
         public function insertTeacher($array) {
 
-        $sql="INSERT INTO teachers (login, first_name, last_name) VALUES (:login, :first_name, :last_name)";
-        $stmt = $this->_db->prepare($sql);
-        $stmt->bindParam(':login', $array[0]);
-        $stmt->bindParam(':first_name', $array[1]);
-        $stmt->bindParam(':last_name', $array[2]);
-        $stmt->execute();
+        $query="INSERT INTO teachers (login, first_name, last_name) VALUES (:login, :first_name, :last_name)";
+        $statement = $this->_db->prepare($query);
+        $statement->bindParam(':login', $array[0]);
+        $statement->bindParam(':first_name', $array[1]);
+        $statement->bindParam(':last_name', $array[2]);
+        $statement->execute();
 
     }
 
     public function insertStudent($array){
 
-        $sql="INSERT INTO students (matricule, first_name, last_name) VALUES (:matricule, :first_name, :last_name)";
-        $stmt= $this->_db->prepare($sql);
-        $stmt->bindParam(':matricule', $array[0]);
-        $stmt->bindParam(':first_name', $array[1]);
-        $stmt->bindParam(':last_name', $array[2]);
-        $stmt->execute();
+        $query="INSERT INTO students (matricule, first_name, last_name) VALUES (:matricule, :first_name, :last_name)";
+        $statement= $this->_db->prepare($query);
+        $statement->bindParam(':matricule', $array[0]);
+        $statement->bindParam(':first_name', $array[1]);
+        $statement->bindParam(':last_name', $array[2]);
+        $statement->execute();
 
     }
 
-	public function insertQuery($exercise, $num_level){
-    	new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+	public function insertQuery($exercise){
+
+        $query= 'INSERT INTO exercises (number, theme, statement, query, nb_lines, label, last_modification, num_exercise, author, num_level)
+                  VALUES (DEFAULT, :theme, :statement, :query, :nb_lines, :label, :last_modification, :num_exercise, :author, :num_level)';
+        $statement= $this->_db->prepare($query);
+        $statement->bindParam(':theme', $exercise->theme());
+        $statement->bindParam(':statement', $exercise->statement());
+        $statement->bindParam('query', $exercise->query());
+        $statement->bindParam('nb_lines', $exercise->nb_lines());
+        $statement->bindParam('label', $exercise->label());
+        $statement->bindParam('last_modification', $exercise->last_modification());
+        $statement->bindParam(':num_exercise', $exercise->num_exercise());
+        $statement->bindParam(':author', $exercise->author());
+        $statement->bindParam(':num_level', $exercise->num_level());
+        $statement->execute();
 
     }
 

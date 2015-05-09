@@ -23,7 +23,7 @@ class ImportCSVController{
          $notification= '';
 
 
-        $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');#
+        $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');#
         /*try{
             // Undefined | Multiple Files | $_FILES Corruption Attack
             // If this request falls under any of them, treat it invalid.
@@ -101,26 +101,23 @@ class ImportCSVController{
                 }
             }elseif (preg_match('/num;theme;enonce;query;nb/', $file[0])) {
                 if(empty($_POST['level_num'])){
-                    $notification= "If you import queries you need to specify the number of the level for that exercises";
+                    $notification= "Veuillez entrer un numero de niveau valide afin d'importer des exercices";
                 }else{
-                    if($_POST['level_num'])//TODO vérifier que le numero n'existe 
-                    foreach ($file as $index => $queryData) {
-                        if($index> 0){
-                            $valuesTable= explode(';', $queryData);
-                            #num numéro du query
-                            #theme information complémentaire ( peut être NULL)
-                            #enonce enonce de la question
-                            #query reponse de la question ( query)
-                            #nb nbr de lignes resultant du query
+                    if(isAValidLevelNumber($_POST['level_num'])){
+                        foreach ($file as $index => $queryData) {
+                            if ($index > 0) {
 
-                            foreach ($valuesTable as $index => $contenuCase) {
-                                if($contenuCase== ''){
-                                    $contenuCase= 'NULL';
+                                $queryValues = explode(';', $queryData);
+                                foreach($queryValues as $index => $queryValue){
+                                    $queryValues[$index]= convertVoidToNull($queryValue);
                                 }
-                            }
 
-                            new Exercises('NULL','NULL','NULL',$valuesTable[3],$valuesTable[4],'NULL','NULL',$valuesTable[0],$valuesTable[2],$valuesTable[1]);
-                        }//TODO créer de bon exercices
+                                $exercise= new Exercises('NULL','NULL','NULL',$queryValues[4],'NULL',$queryValues[0],$_POST['level_num'],$queryValues[3],$queryValues[2],$queryValues[1]);
+                                var_dump($exercise);
+                            }
+                        }
+                    }else{
+                        $notification= "Veuillez entrer un numero de niveau valide (non existant) s'il vous plait";
                     }
                 }
             }else{
@@ -134,54 +131,41 @@ class ImportCSVController{
         }
     }
 
-    /*//Access path
-	$file_teacher   = fopen($rep.$teachers, "r");
- 	
-	//tant qu'on est pas a la fin du fichier :
-	while (!feof($file_teacher))
-	{
-	// On recupere toute la ligne
-	$uneLigne = addslashes(fgets($file_teacher));
-	
-	//On met dans un tableau les differentes valeurs trouvés (ici séparées par un ';')
-	$tableauValeurs = explode(';', $uneLigne);
-	// On crée la requete pour inserer les donnees
-	//$sql="INSERT IGNORE INTO 'teachers' ('login', 'first_name', 'last_name', 'password') VALUES ('".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."','.NULL')";
- 	$sql="INSERT IGNORE INTO 'teachers' ('login', 'first_name', 'last_name') VALUES (':login', ':first_name', ':last_name')";
-	$this->_db->prepare($sql)->execute();
-	}
-	
-	$file_student =fopen($rep.$students ,"r" );
-	while (!feof($file_student))
-	{
-		// On recupere toute la ligne
-		$uneLigne = addslashes(fgets($file_student));
-	
-		//On met dans un tableau les differentes valeurs trouvés (ici séparées par un ';')
-		$tableauValeurs = explode(';', $uneLigne);
-		// On crée la requete pour inserer les donnees
-		try{ 
-			//$sql="INSERT IGNORE INTO 'students' ('login', 'first_name', 'last_name', 'password','last_connection') VALUES ('".$tableauValeurs[0]."', '".$tableauValeurs[1]."', '".$tableauValeurs[2]."','.NULL.','.NULL')";
-			$sql="INSERT IGNORE INTO 'students' ('login', 'first_name', 'last_name') VALUES (':login', ':first_name', ':last_name')";
-			
-			//$this->_db->prepare($sql)->execute();
-			$stmt = $this->_db->prepare($sql);
-			$stmt->bindParam(':login', $tableauValeurs[0]);
-			$stmt->bindParam(':first_name', $tableauValeurs[1]);
-			$stmt->bindParam(':last_name', $tableauValeurs[2]);
-			$stmt->execute();
-		}catch(PDOException $e){
-			echo $sql . "<br>" . $e->getMessage();
-		}
-		
-	}*/
-
 	require_once(PATH_VIEWS . "importerCSV.php");
 
     }
 
     public function testCSValide($fileName){
         //TODO verify mime-type of file and if file is correct
+    }
+
+    /**
+     * @param $level the level input of the user
+     * @return bool  true if the the level doesn't exist already, false if it already exist.
+     */
+    public function isAValidLevelNumber($level){
+
+        $levels = Db::getInstance()->select_level();
+        foreach($levels as $index => $level){
+
+            if($level->level()== $_POST['level_num']){
+                return false;
+            }
+
+        }
+        return true;
+
+    }
+
+    /**
+     * @param $queryValue A query field
+     * @return string NULL if $queryValue is empty, his value else.
+     */
+    public function convertVoidToNull($queryValue){
+        if($queryValue= '')
+            return 'NULL';
+        else
+            return $queryValue;
     }
 }
 ?>

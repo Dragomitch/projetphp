@@ -24,19 +24,6 @@ class Exercises{
 		$this->_theme=$theme;	
 	}
 
-	#author peut etre null
-	#num_exercise est le numero de l'exercice dans le niveau
-	#num_level doit etre attribue
-	#statement= explication de l'exercise
-
-	#num;theme;enonce;query;nb
-	
-	#num= numero du query
-	#theme= Peut etre null -> indications supplementaires sur l'ex ( group-by, etc)
-	#enonce= est la question a resoudre
-	#query= reponse du query en sql
-	#nb= nbr de lignes resultants de l'execution du query
-
 	public function author(){
 		return $this->_author;
 	}

@@ -27,7 +27,7 @@ class FirstLoginController{
 			
 		}else{
 			# L'utilisateur doit remplir le formulaire
-			$notification='Authentifiez-vous';
+			$notification='Authentifiez-vous'; //TODO etre plus explicite et renvoyer un message d'erreur lorsque le new password est fail;
 		}
 
 			

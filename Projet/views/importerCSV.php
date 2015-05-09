@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/modele01.css" />
 
 <!-- Nav -->
-<?php require_once(PATH_VIEWS.'headerteachers.php'); ?> // TODO mettre ca dans l'index en fonction du type de personne
+<?php require_once(PATH_VIEWS.'headerteachers.php'); ?> <!--// TODO mettre ca dans l'index en fonction du type de personne-->
 
 <div class="wrapper">
 	<h2>Upload CSV</h2>
@@ -21,9 +21,8 @@
     <p>If you want to upload exercises, please complete that field<br>
     <!--  TODO Faire en sorte que les champs qui suivent ne soient visibles que si l'on selectionne uploadQueries  -->
     <!-- TODO rajouter un champ pour préciser un label-->
-    <!-- TODO rajouter un champ pour préciser les themes-->
 
-	The new level number for that queries:<input type="text" name="level_num"><br>
+        The new level number for that queries:<input type="text" name="level_num"><br>
 	</p>
 	<input type="submit" value="Upload file"><br>
 	</form>
