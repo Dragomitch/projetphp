@@ -123,8 +123,9 @@ class ImportCSVController{
 
                                 }catch(PDOException $pdo){
                                     Db::getInstance()->deleteLevel($level_label);
-                                    $notification= "La base de donnée n'a pas pu executer votre requête.
-                                    Elle renvoie l'erreur suivante:".'<br>'.$pdo.error_get_last();
+                                    $notification= "La base de donnée n'a pas pu executer votre requête.".'<br>'.
+                                    "Veuillez vérifier la validité de votre fichier CSV.".'<br>'.
+                                    "A titre informatif, voici l'erreur renvoyée par la DB:".'<br>'.$pdo.error_get_last();
                                 }
                             }
                         }

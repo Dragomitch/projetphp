@@ -12,22 +12,9 @@
             <div class="inner">
 
                 <!-- Logo -->
-                <h1><a href="index.html" id="logo">Ianarch</a></h1>
+                <h1><a href="index.php" id="logo">Ianarch</a></h1>
 
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li class="current_page_item"><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="#">Modification Exercices</a>
-                        </li>
-                        <li><a href="#">Liste Etudiants</a></li>
-                        <li><a href="#">Exporter CSV</a></li>
-                        <li><a href="#">Importer CSV</a></li>
-                        <li><a href="#">Deconnexion</a></li>
-                    </ul>
-                </nav>
-
+                <?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
             </div>
         </header>
 
@@ -49,4 +36,3 @@
 </div>
 
 </head>
-

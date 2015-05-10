@@ -12,20 +12,10 @@
             <div class="inner">
 
                 <!-- Logo -->
-                <h1><a href="index.html" id="logo">Ianarch</a></h1>
+                <h1><a href="index.php" id="logo">Ianarch</a></h1>
 
                 <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li class="current_page_item"><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="">Exercices</a>
-                        </li>
-                        <li><a href="left-sidebar.html">Profil</a></li>
-                        <li><a href="no-sidebar.html">Deconnexion</a></li>
-                    </ul>
-                </nav>
-
+                <?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
             </div>
         </header>
 

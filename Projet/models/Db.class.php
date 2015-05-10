@@ -72,7 +72,7 @@ class Db
     }
 
     public function deleteLevel($level_label){
-        //$query= 'DELETE '
+        //$query= 'DELETE ' //todo delete le level et les exercices
     }
 
     public function insertLevel($level_label){
@@ -156,4 +156,21 @@ class Db
 	
 		return $tableau;
 	}
+
+    public function save_answer($matricule,$question_num,$answer){
+        $query ='INSERT INTO `sitephp`.`students_answers` (`number`, `answer_query`, `exercise`, `student`) VALUES (NULL,'.$this->_db->quote($answer).','.$this->_db->quote($question_num).','.$this->_db->quote($matricule).')';
+        $this->_db->prepare($query)->execute();
+    }
+
+    public function select_answer($matricule,$question_num){
+        $query ='SELECT * FROM `students_answers` WHERE `exercise`='.$this->_db->quote($question_num).'AND `student`='.$this->_db->quote($matricule).'';
+        $result =$this->_db->query($query);
+        if ($result->rowcount()!=0) {
+            while ($row = $result->fetch()) {
+                $tableau[] = new students_answers($row->number, $row->answer_query, $row->exercise, $row->student);
+            }
+        }
+
+        return $tableau;
+    }
 }
