@@ -73,19 +73,28 @@
 <!-- 					src="images/tn_niveau1.jpg" alt="DSD niveau1" -->
 <!-- 					title="Cliquez pour agrandir" /></a> -->
 
-					<form action="" method="post">
+					<form action="#" method="post">
 						<p>
-							<textarea rows="6" cols="65" name="SolReq">SELECT </textarea>
+							<textarea rows="6" cols="65" name="answer">SELECT </textarea>
 						</p>
 						<p class="droite">
 							<input type="submit" value="Exécuter" />
 						</p>
 					</form>
 				</div>
-				<h2>Réponse</h2>
+				<?php if($show_answer){?>
+				
+				<h2> Réponse Attendue </h2>  
 				<p>
 				<span class="html"><?php echo $tabexercises[$i]->query(); ?></span>
 				</p>
+				<h2>Votre Réponse </h2>
+				<p>
+				<span class="html">
+				<?php echo $tabanswer[0]->answer_query();?>
+				</span>
+				 </p>
+				<?php }?>
 			</div>
 
 			</head>

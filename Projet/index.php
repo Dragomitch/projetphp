@@ -24,7 +24,12 @@
 	require_once (PATH_VIEWS . 'header.php');
 	
 	# Ecrire ici le menu du site de toutes pages HTML
-	#require_once(PATH_VIEWS . 'menu.php');
+// 	if ( empty ( $_SESSION ['authentifie'] ) ){
+// 		header("Location: index.php?action=login");
+// 		die();
+// 	}elseif($_SESSION['type'] != 'teacher') {
+// 		require_once(PATH_VIEWS.'headerteachers.php');
+// 	}
 
 	# Tester si une variable GET 'action' est précisée dans l'URL index.php?action=...
 	$action = (isset($_GET['action'])) ? htmlentities($_GET['action']) : 'default';
