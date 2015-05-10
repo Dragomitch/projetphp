@@ -81,7 +81,7 @@ class ImportCSVController{
             echo $e->getMessage();
         }*/
     if(!empty($_FILES['CSVfile'])){
-        if( $_FILES['CSVfile']['tmp_name'] !=  ''){
+        if( $_FILES['CSVfile']['tmp_name'] !=  ''){//TODO rajouter notifications
             $tableau= array();
             $file= file($_FILES['CSVfile']['tmp_name']);
             if(preg_match('/"Matric Info";"Nom Etudiant";"Prénom Etudiant"/',$file[0])){
@@ -92,7 +92,7 @@ class ImportCSVController{
                     }
                 }
 
-            }elseif(preg_match('/login;nom;prenom/',$file[0])){
+            }elseif(preg_match('/login;nom;prenom/',$file[0])){ //TODO rajouter notifications
                 foreach($file as $index => $teacherData){
                     if($index> 0){
                         $valuesTable= explode(';', $teacherData);
@@ -100,24 +100,36 @@ class ImportCSVController{
                     }
                 }
             }elseif (preg_match('/num;theme;enonce;query;nb/', $file[0])) {
-                if(empty($_POST['level_num'])){
+                if(empty($_POST['level_label'])){
                     $notification= "Veuillez entrer un numero de niveau valide afin d'importer des exercices";
                 }else{
-                    if(isAValidLevelNumber($_POST['level_num'])){
+                    $level_label= htmlentities($_POST['level_label']);
+                    if($this->isAValidLevelName($level_label)){
+                        Db::getInstance()->insertLevel($level_label);
                         foreach ($file as $index => $queryData) {
                             if ($index > 0) {
 
                                 $queryValues = explode(';', $queryData);
                                 foreach($queryValues as $index => $queryValue){
-                                    $queryValues[$index]= convertVoidToNull($queryValue);
+                                    $queryValues[$index]= $this->convertVoidToNull($queryValue);
                                 }
 
-                                $exercise= new Exercises('NULL','NULL','NULL',$queryValues[4],'NULL',$queryValues[0],$_POST['level_num'],$queryValues[3],$queryValues[2],$queryValues[1]);
-                                var_dump($exercise);
+                                $exercise= array($queryValues[0], $queryValues[1], $queryValues[2], $queryValues[3], $queryValues[4], $level_label);
+
+                                try {
+
+                                    Db::getInstance()->insertQuery($exercise);
+                                    $notification= 'Les queries ont été correctement importées dans le niveau '.$level_label.'.';
+
+                                }catch(PDOException $pdo){
+                                    Db::getInstance()->deleteLevel($level_label);
+                                    $notification= "La base de donnée n'a pas pu executer votre requête.
+                                    Elle renvoie l'erreur suivante:".'<br>'.$pdo.error_get_last();
+                                }
                             }
                         }
                     }else{
-                        $notification= "Veuillez entrer un numero de niveau valide (non existant) s'il vous plait";
+                        $notification= "Veuillez entrer un nom de niveau valide (non existant)";
                     }
                 }
             }else{
@@ -143,12 +155,12 @@ class ImportCSVController{
      * @param $level the level input of the user
      * @return bool  true if the the level doesn't exist already, false if it already exist.
      */
-    public function isAValidLevelNumber($level){
+    public function isAValidLevelName($level){
 
         $levels = Db::getInstance()->select_level();
-        foreach($levels as $index => $level){
+        foreach($levels as $index => $dbLevel){
 
-            if($level->level()== $_POST['level_num']){
+            if($dbLevel->label()== $level){
                 return false;
             }
 
@@ -162,10 +174,10 @@ class ImportCSVController{
      * @return string NULL if $queryValue is empty, his value else.
      */
     public function convertVoidToNull($queryValue){
-        if($queryValue= '')
+        if(strcmp($queryValue, '') == 0)
             return 'NULL';
         else
-            return $queryValue;
+            return trim($queryValue);
     }
 }
 ?>

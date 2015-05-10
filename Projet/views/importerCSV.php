@@ -22,7 +22,7 @@
     <!--  TODO Faire en sorte que les champs qui suivent ne soient visibles que si l'on selectionne uploadQueries  -->
     <!-- TODO rajouter un champ pour préciser un label-->
 
-        The new level number for that queries:<input type="text" name="level_num"><br>
+        The new level name for the queries:<input type="text" name="level_label"><br>
 	</p>
 	<input type="submit" value="Upload file"><br>
 	</form>

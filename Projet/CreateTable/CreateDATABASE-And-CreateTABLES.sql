@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS sitephp.students(
 )ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS sitephp.teachers(
-	login				CHAR(9) 	PRIMARY KEY,
+	login				VARCHAR(15) 	PRIMARY KEY,
 	first_name			CHAR(15)	NOT NULL,
 	last_name			CHAR(15)	NOT NULL,
 	password			CHAR(40)	NULL
@@ -18,20 +18,20 @@ CREATE TABLE IF NOT EXISTS sitephp.teachers(
 CREATE TABLE IF NOT EXISTS sitephp.levels(
 	level 				INTEGER			auto_increment PRIMARY KEY,
 	num_level 			INTEGER			NOT NULL,
-	label				VARCHAR(20)		NOT NULL
+	label				VARCHAR(50)		NOT NULL
 )ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS sitephp.exercises(
-	number				INTEGER			PRIMARY KEY,
+	number				INTEGER			AUTO_INCREMENT PRIMARY KEY,
 	theme				VARCHAR(60)		NULL,
 	statement			VARCHAR(400)	NOT NULL,
-	query				VARCHAR(100)	NULL,
-	nb_lines			INTEGER			NULL,
+	query				VARCHAR(100)	NOT NULL,
+	nb_lines			VARCHAR(40)			NOT NULL,
 	label				VARCHAR(35)		NOT NULL,
 	last_modification	DATETIME		NULL,
-	num_exercise		INTEGER			NULL,
-	author				CHAR(9)			NULL,
-	num_level			INTEGER			NULL,
+	num_exercise		INTEGER			NOT NULL,
+	author				VARCHAR(15)			NULL,
+	num_level			INTEGER			NOT NULL,
 
 	FOREIGN KEY fk_author(author)		REFERENCES teachers(login),
 	FOREIGN KEY fk_num_level(num_level)	REFERENCES levels(level)
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS sitephp.exercises(
 
 CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 	number				INTEGER			auto_increment PRIMARY KEY,
-	answer_query		VARCHAR(100)	NULL,
+	answer_query		VARCHAR(1000)	NULL,
 	exercise 			INTEGER			NOT NULL,
 	student 			INTEGER			NOT NULL,
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 
 )ENGINE=InnoDB;
 
--- Changer dans answer_students le Char(100) en VARCHAR(100)
+-- Changer dans answer_students le Char(100) en VARCHAR(1000)
 -- Vérifier la relation qu'il faut entre students_answer et exercises.(	et donc si number doit également être FK)
 -- Un exercice peut être ne pas avoir de niveau attribué ? Obligatoirement
 -- Un author peut être null dans exercises. Enlever NN et gras.

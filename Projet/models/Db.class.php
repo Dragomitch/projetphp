@@ -48,26 +48,45 @@ class Db
     }
 
 	public function insertQuery($exercise){
+        $query= 'SELECT level FROM levels WHERE label='.$this->_db->quote($exercise[5]);
+        $resultat= $this->_db->query($query);
+        $row= $resultat->fetch();
+        $level= $row->level;
 
-        $query= 'INSERT INTO exercises (number, theme, statement, query, nb_lines, label, last_modification, num_exercise, author, num_level)
-                  VALUES (DEFAULT, :theme, :statement, :query, :nb_lines, :label, :last_modification, :num_exercise, :author, :num_level)';
+        $query= 'INSERT INTO exercises (number, theme, statement, query, nb_lines, label, num_exercise, num_level)
+                  VALUES (DEFAULT, :theme, :statement, :query, :nb_lines, :label, :num_exercise, :level)';
+
         $statement= $this->_db->prepare($query);
-        $statement->bindParam(':theme', $exercise->theme());
-        $statement->bindParam(':statement', $exercise->statement());
-        $statement->bindParam('query', $exercise->query());
-        $statement->bindParam('nb_lines', $exercise->nb_lines());
-        $statement->bindParam('label', $exercise->label());
-        $statement->bindParam('last_modification', $exercise->last_modification());
-        $statement->bindParam(':num_exercise', $exercise->num_exercise());
-        $statement->bindParam(':author', $exercise->author());
-        $statement->bindParam(':num_level', $exercise->num_level());
+
+        $defaultLabel= $level.'_'.$exercise[5];
+
+        $statement->bindParam(':num_exercise', $exercise[0]);
+        $statement->bindParam(':theme', $exercise[1]);
+        $statement->bindParam(':statement', $exercise[2]);
+        $statement->bindParam(':query', $exercise[3]);
+        $statement->bindParam(':nb_lines', $exercise[4]);
+        $statement->bindParam(':level', $level);
+        $statement->bindParam(':label', $defaultLabel);
+
         $statement->execute();
+    }
+
+    public function deleteLevel($level_label){
+        //$query= 'DELETE '
+    }
+
+    public function insertLevel($level_label){
+        $query= 'INSERT INTO levels (level, num_level, label) VALUES (DEFAULT,0,'.$this->_db->quote($level_label).')';
+        $this->_db->prepare($query)->execute();
+
+        $lastInsert= $this->_db->lastInsertId();
+        $query= "UPDATE levels SET num_level=".$lastInsert." WHERE level=".$lastInsert;
+        $this->_db->prepare($query)->execute();
 
     }
 
 	public function valid_teacher($login,$password){
 		$query = 'SELECT * from teachers WHERE login='.$this->_db->quote($login).' AND password='.$this->_db->quote(sha1($password));
-		var_dump($query);
         $result = $this->_db->query($query);
 		$authenticated = false;
 		if ($result->rowcount()!=0) {
