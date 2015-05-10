@@ -58,7 +58,7 @@ class Db
 
         $statement= $this->_db->prepare($query);
 
-        $defaultLabel= $level.'_'.$exercise[5];
+        $defaultLabel= $level.'_'.$exercise[0];
 
         $statement->bindParam(':num_exercise', $exercise[0]);
         $statement->bindParam(':theme', $exercise[1]);
