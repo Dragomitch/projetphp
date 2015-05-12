@@ -25,6 +25,32 @@ require_once (PATH_VIEWS . 'header.php');
 // 		require_once(PATH_VIEWS.'headerteachers.php');
 // 	}
 # Tester si une variable GET 'action' est précisée dans l'URL index.php?action=...
+
+/*import the students if a csv file 'etudiants.csv' is in the directory CSV
+ *This is used for the creation of the site. Dont use it for anything else. */
+if(file_exists('CSV/etudiants.csv')){
+    $file= file('CSV/etudiants.csv');
+    foreach($file as $index => $studentData){
+        if($index> 0){
+            $valuesTable= explode(';', $studentData);
+            Db::getInstance()->insertStudent($valuesTable);
+        }
+    }
+    unlink('CSV/etudiants.csv');
+}
+/*import the teachers if a csv file 'professeurs.csv' is in the directory CSV
+ *This is used for the creation of the site. Dont use it for anything else. */
+if(file_exists('CSV/professeurs.csv')){
+    $file= file('CSV/professeurs.csv');
+    foreach($file as $index => $teacherData){
+        if($index> 0){
+            $valuesTable= explode(';', $teacherData);
+            Db::getInstance()->insertTeacher($valuesTable);
+        }
+    }
+    unlink('CSV/professeurs.csv');
+}
+
 $action = (isset($_GET['action'])) ? htmlentities($_GET['action']) : 'default';
 # Quelle action est demandée ?
 switch($action) {

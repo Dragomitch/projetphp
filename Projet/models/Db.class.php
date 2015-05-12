@@ -75,13 +75,13 @@ class Db
         //$query= 'DELETE ' //todo delete le level et les exercices
     }
 
-    public function insertLevel($level_label){
-        $query= 'INSERT INTO levels (level, num_level, label) VALUES (DEFAULT,0,'.$this->_db->quote($level_label).')';
+    public function insertLevel($level_label, $level_num){
+        $query= 'INSERT INTO levels (level, num_level, label) VALUES (DEFAULT,'.$level_num.','.$this->_db->quote($level_label).')';
         $this->_db->prepare($query)->execute();
 
-        $lastInsert= $this->_db->lastInsertId();
+        /*$lastInsert= $this->_db->lastInsertId();
         $query= "UPDATE levels SET num_level=".$lastInsert." WHERE level=".$lastInsert;
-        $this->_db->prepare($query)->execute();
+        $this->_db->prepare($query)->execute();*/
 
     }
 

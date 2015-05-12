@@ -8,6 +8,7 @@
     
     <p>Make sure the file you want to upload is correct because the importation in Database is do just after the upload is finished<br>
     If you want to import students or teachers, please use this button.<br>
+    Assurez-vous que le fichier que vous voulez importer est correct.
 	</p>
  	
  	<?php if(!empty($notification)) echo $notification ?><br>
@@ -18,11 +19,12 @@
         
     	
 
-    <p>If you want to upload exercises, please complete that field<br>
+    <p>Si vous voulez uploader des exercices, veuillez rentrer un nom de niveau et un numéro de niveau<br>
     <!--  TODO Faire en sorte que les champs qui suivent ne soient visibles que si l'on selectionne uploadQueries  -->
     <!-- TODO rajouter un champ pour préciser un label-->
 
-        The new level name for the queries:<input type="text" name="level_label"><br>
+        Le nom du niveau où l'on veut importer les exercices:<input type="text" name="level_label"><br>
+        Le numéro du niveau où l'on veut importer les exercices: <input type="text" name="level_num"><br>
 	</p>
 	<input type="submit" value="Upload file"><br>
 	</form>

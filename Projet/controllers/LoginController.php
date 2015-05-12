@@ -9,6 +9,7 @@ class LoginController {
                 header("Location: index.php?action=homeStudent");
             }elseif ($_SESSION ['type'] == 'teacher'){
                 header("Location: index.php?action=homeTeacher");
+
             }else {
                 header ( "Location: index.php?action=login" ); // redirection HTTP vers l'action login
                 die ();//TODO Code inaccessible ?
