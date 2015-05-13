@@ -31,7 +31,7 @@
 
 			<div id="form3">
 				<form
-					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>"
+					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise()?>"
 					id="raccourci" method="post">
 					<p>
 						<input type="hidden" name="module" /> <input type="text"
@@ -40,7 +40,7 @@
 					</p>
 				</form>
 				<form
-					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>"
+					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise()?>"
 					method="post" id="precedent">
 					<p>
 						<input type="hidden" name="module" value="niv" /> <input
@@ -50,7 +50,7 @@
 					</p>
 				</form>
 				<form
-					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>"
+					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise()?>"
 					method="post" id="suivant">
 					<p>
 						<input type="hidden" name="module" value="niveau1" /> <input
@@ -79,7 +79,7 @@
 				<!-- 					title="Cliquez pour agrandir" /></a> -->
 
 				<form
-					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>"
+					action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise() ?>"
 					method="post">
 					<input type="hidden" name="number_ex"
 						value="<?php echo $tabexercises[$i]->number()?>">

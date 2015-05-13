@@ -16,11 +16,10 @@ class ExercisesController{
         $tabexercises=Db::getInstance()->select_exercise($level);
         $num_level=Db::getInstance()->select_num_level($level);
         $show_answer=false;
-        
-        if(empty($number_question)){
-        $i=0;
-        }else $i=$number_question;
-        
+        #i = num_exercise; $i is the current exercise displayed
+      if(isset($_GET['exercise'])){
+       $i=$_GET['exercise']-1;
+      }
         if (isset($_POST)){
             if (!empty($_POST['nr_question'])){
                 $i=htmlentities($_POST['nr_question'])-1;
@@ -59,7 +58,7 @@ class ExercisesController{
 				$number_question=$i;
             }
 
-
+        
 
 
         }

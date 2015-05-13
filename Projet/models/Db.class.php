@@ -223,6 +223,7 @@ class Db
     	$query = $answer;
     	$fetch_type = PDO::FETCH_ASSOC;
     	$result = $this->_db->query($query);
+    	var_dump($query);
     	$rows = $result->fetchAll($fetch_type);
     	$columns = empty($rows) ? array() : array_keys($rows[0]);
 		
