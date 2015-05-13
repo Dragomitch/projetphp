@@ -53,12 +53,10 @@ class Db
         $row= $resultat->fetch();
         $level= $row->level;
 
-        $query= 'INSERT INTO exercises (number, theme, statement, query, nb_lines, label, num_exercise, num_level)
-                  VALUES (DEFAULT, :theme, :statement, :query, :nb_lines, :label, :num_exercise, :level)';
+        $query= 'INSERT INTO exercises (number, theme, statement, query, nb_lines, num_exercise, num_level)
+                  VALUES (DEFAULT, :theme, :statement, :query, :nb_lines, :num_exercise, :level)';
 
         $statement= $this->_db->prepare($query);
-
-        $defaultLabel= $level.'_'.$exercise[0];
 
         $statement->bindParam(':num_exercise', $exercise[0]);
         $statement->bindParam(':theme', $exercise[1]);
@@ -66,7 +64,6 @@ class Db
         $statement->bindParam(':query', $exercise[3]);
         $statement->bindParam(':nb_lines', $exercise[4]);
         $statement->bindParam(':level', $level);
-        $statement->bindParam(':label', $defaultLabel);
 
         $statement->execute();
     }
@@ -150,7 +147,7 @@ class Db
 		$result =$this->_db->query($query);
 		if ($result->rowcount()!=0) {
 			while ($row = $result->fetch()) {
-				$tableau[] = new Levels($row->label,$row->level);
+				$tableau[] = new Levels($row->label,$row->level, $row->num_level);
 			}
 		}
 	

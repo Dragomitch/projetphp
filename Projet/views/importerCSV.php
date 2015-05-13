@@ -6,12 +6,10 @@
 <div class="wrapper">
 	<h2>Upload CSV</h2>
     
-    <p>Make sure the file you want to upload is correct because the importation in Database is do just after the upload is finished<br>
-    If you want to import students or teachers, please use this button.<br>
-    Assurez-vous que le fichier que vous voulez importer est correct.
-	</p>
+    <p>Cette secion va vous permettre d'importer des fichiers CSV dans votre DB.<br>
+        Assurez-vous que le fichier que vous voulez uploader est correct avant de tenter d'uploader.
+    </p>
  	
- 	<?php if(!empty($notification)) echo $notification ?><br>
 
 	<form enctype="multipart/form-data" action="index.php?action=importCSV" method="POST">
 		<input type="hidden" name="MAX_FILE_SIZE" value="1000000">
@@ -21,11 +19,12 @@
 
     <p>Si vous voulez uploader des exercices, veuillez rentrer un nom de niveau et un numéro de niveau<br>
     <!--  TODO Faire en sorte que les champs qui suivent ne soient visibles que si l'on selectionne uploadQueries  -->
-    <!-- TODO rajouter un champ pour préciser un label-->
 
         Le nom du niveau où l'on veut importer les exercices:<input type="text" name="level_label"><br>
         Le numéro du niveau où l'on veut importer les exercices: <input type="text" name="level_num"><br>
 	</p>
 	<input type="submit" value="Upload file"><br>
 	</form>
+    <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; }?></p>
+
 </div>

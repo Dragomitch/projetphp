@@ -3,16 +3,7 @@ class ImportCSVController{
 	public function __construct(){
 		
 	}
-    /**
-    *TODO IL FAUT <---- que les étudiants et les profs soient importés lors du premier lancement de l'application s'il n'y en a pas
-    *Les DB sont censées exister, pas besoin de les importer.
-    *
-    *
-    */
 
-    /**
-     *
-     */
     public function run(){
 
     if ( empty ( $_SESSION ['authentifie'] ) ){
@@ -52,7 +43,7 @@ class ImportCSVController{
                 }else{
                     $level_label= htmlentities($_POST['level_label']);
                     $level_num= htmlentities($_POST['level_num']);
-                    if($this->isAValidLevelName($level_label)){
+                    if($this->isAValidLevel($level_label, $level_num)){
                         Db::getInstance()->insertLevel($level_label, $level_num);
                         foreach ($file as $index => $queryData) {
                             if ($index > 0) {
@@ -106,18 +97,18 @@ class ImportCSVController{
      * @param $level the level input of the user
      * @return bool  true if the the level doesn't exist already, false if it already exist.
      */
-    public function isAValidLevelName($level){
+    public function isAValidLevel($level_name, $num_level){
 
         $levels = Db::getInstance()->select_level();
         foreach($levels as $index => $dbLevel){
 
-            if($dbLevel->label()== $level){
+            if($dbLevel->label()== $level_name)
                 return false;
-            }
 
-        }//coucou
+            if($dbLevel->level_num()== $num_level)
+                return false;
+        }
         return true;
-
     }
 
     /**
