@@ -15,7 +15,7 @@
                 <h1><a href="index.php" id="logo">Ianarch</a></h1>
 
                 <!-- Nav -->
-<?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
+                <?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
             </div>
         </header>
 

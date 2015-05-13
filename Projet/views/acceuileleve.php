@@ -16,7 +16,7 @@
 											<li>IAnArch</li>
 											<li class="current_page_item"><a href="index.php?action=homeStudent">Home</a></li>
 											<li>
-												<a href="index.php?action=level">Niveau</a>
+                                                <a href="index.php?action=level">Niveau</a>
 											</li>
 											<li><a href="index.php?action=studentStat">Profil</a></li>
 											<li><a href="index.php?action=logout">Deconnexion</a></li>
