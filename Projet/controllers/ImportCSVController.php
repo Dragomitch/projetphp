@@ -92,7 +92,7 @@ class ImportCSVController{
         }
     }
 
-	require_once(PATH_VIEWS . "importerCSV.php");
+	require_once(PATH_VIEWS . "importCSV.php");
 
     }
 
