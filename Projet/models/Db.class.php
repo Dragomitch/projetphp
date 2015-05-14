@@ -113,7 +113,6 @@ class Db
     public function update_mdp_Student($matricule,$password) {
         $query = 'UPDATE students SET password= '.$this->_db->quote(sha1($password)).' WHERE matricule=' .$this->_db->quote($matricule).'AND password is NULL';
         $this->_db->prepare($query)->execute();
-        #toDo secure password modification !
     }
 
 

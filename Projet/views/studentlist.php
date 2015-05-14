@@ -3,11 +3,6 @@
 <div id="body_wrapper">
     <div class="container">
 
-
-
-
-
-
         <!-- Nav -->
         <?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
 
@@ -32,7 +27,7 @@
                     <tr>
                         <td><span class="html"><?php echo $tabstudents[$i]->matricule() ?></span></td>
                         <td><a href="index.php?action=studentEx&matricule=<?php echo $tabstudents[$i]->matricule() ?>"><span class="html"><?php echo $tabstudents[$i]->first_name()?></span></a></td>
-                        <td><span class="html"><?php echo $tabstudents[$i]->last_name()?></span></td><!-- TODO faire en fonction des levels -->
+                        <td><span class="html"><?php echo $tabstudents[$i]->last_name()?></span></td>
 
                         <?php for($k=0;$k<count($tablevel);$k++){ ?>
                         <?php $tabexercise=Db::getInstance()->select_exercise($tablevel[$k]->level());?>

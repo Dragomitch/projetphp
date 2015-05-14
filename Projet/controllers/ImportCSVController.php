@@ -89,10 +89,6 @@ class ImportCSVController{
 
     }
 
-    public function testCSValide($fileName){
-        //TODO verify mime-type of file and if file is correct
-    }
-
     /**
      * @param $level the level input of the user
      * @return bool  true if the the level doesn't exist already, false if it already exist.
@@ -120,6 +116,6 @@ class ImportCSVController{
             return 'NULL';
         else
             return trim($queryValue);
-    }//TODO strpos pour faire une recherche sur une str,
+    }
 }
 ?>
