@@ -2,8 +2,8 @@
 
 
 html {
-	font-size: 100%; /* Voir -> Note 1 � la fin de la feuille de styles. */	
-	background-image: url("views/css/image/banniere.JPG");
+	font-size: 100%; 
+	background-image: url("./image/banniere.JPG");
 	background-attachment: fixed;
 	background-position: top;
 	background-repeat: no-repeat;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	margin: 10;
+	margin: 10px;
 	padding: 10px 20px; /* Note -> 2 */
 	font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif; /* 3 */
 	font-size: .8em; /* -> 4 */
@@ -19,8 +19,21 @@ body {
 	color: black;
 	background: white;
 	text-align: center;
-	
-
+}
+#body_wrapper{
+	width:900px;
+	background:#CCFF99;
+	padding: 0 25px 3px 25px;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+nav{
+	border-bottom-width: 1px;
+	border-bottom-color: black;
+	border-bottom-style: solid;
 }
 
 /* Titres */
@@ -50,6 +63,7 @@ ul {
 li {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 
 /* Paragraphes */
@@ -93,7 +107,46 @@ strong {
 	font-weight: bold;
 	color: dimgray;
 }
+table, th, td {
+  margin: auto;
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 10px; 
 
+}
+input#direct {
+	display: inline;
+	width: 20px;
+	height: 17px; background : #E6E6FA;
+	-moz-border-radius: 2px;
+	background: #E6E6FA;
+}
+
+input#go {
+	width: 30px;
+	padding: 0px;
+	text-align: center;
+	display: inline;
+}
+#raccourci {
+	display: inline;
+}
+
+#precedent {
+	display: inline;
+}
+
+#suivant {
+	display: inline;
+}
+
+div#form3 {
+	margin-top: 14px;
+	
+}
+
+#form3 p{
+	display:inline;}
 
 /* --- STYLES POUR CERTAINS CONTENUS DES GABARITS --- */
 
@@ -134,3 +187,12 @@ pre strong {
 #nav ul{
 	width:100%;
 }
+#liststud {
+	margin: auto;
+	
+	
+}
+#niveau{position:absolute;	left: 4%;
+	top : 30%;
+}
+

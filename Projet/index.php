@@ -83,20 +83,20 @@ $action = (isset($_GET['action'])) ? htmlentities($_GET['action']) : 'default';
 # Quelle action est demandée ?
 switch($action) {
     case 'homeStudent':
-        require_once('controllers/AcceuilEleveController.php');
-        $controller = new AcceuilEleveController();
+        require_once('controllers/HomeStudentController.php');
+        $controller = new HomeStudentController();
         break;
     case 'homeTeacher':
         require_once('controllers/HomeTeacherController.php');
         $controller = new HomeTeacherController();
         break;
     case 'logout':
-        require_once('controllers/DeconnexionController.php');
-        $controller = new DeconnexionController();
+        require_once('controllers/LogoutController.php');
+        $controller = new LogoutController();
         break;
     case 'exportCSV':
-        require_once('controllers/ExporterCSVController.php');
-        $controller = new ExporterCSVController();
+        require_once('controllers/ExportCSVController.php');
+        $controller = new ExportCSVController();
         break;
     case 'login':
         require_once('controllers/LoginController.php');
@@ -118,21 +118,13 @@ switch($action) {
         require_once('controllers/ImportCSVController.php');
         $controller = new ImportCSVController();
         break;
-    case 'uploadCSV':
-        require_once('controllers/UploadCVSController.php');
-        $controller= new UploadCSVController();
-        break;
     case 'studentList':
-        require_once('controllers/ListeEtudiantController.php');
-        $controller = new ListeEtudiantController();
+        require_once('controllers/StudentListController.php');
+        $controller = new StudentListController();
         break;
     case 'modifExercice':
-        require_once('controllers/modifExerciceController.php');
-        $controller = new modifExerciceController();
-        break;
-    case 'studentStat':
-        require_once('controllers/StatEtudiantController.php');
-        $controller = new StatEtudiantController();
+        require_once('controllers/ModifyExerciseController.php');
+        $controller = new ModifyExerciseController();
         break;
     case 'studentEx':
     	require_once ('controllers/ShowStudentExController.php');

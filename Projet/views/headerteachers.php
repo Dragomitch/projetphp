@@ -8,3 +8,5 @@
         <li><a href="index.php?action=logout">Logout</a></li>
     </ul>
 </nav>
+
+<body>

@@ -15,12 +15,12 @@
 
 /* G�n�ral */
 html{
-	
+background: #FFFF99;	
 	
 }
 body {
 	color: #000040;
-	background: #ffffff; /* Voir -> Note 1 ci-dessous */
+	background: #FFFF99; /* Voir -> Note 1 ci-dessous */
 }
 a {
 	color: rgb(63,51,255);
@@ -34,12 +34,12 @@ strong {
 
 /* En-t�te */
 header {
-	background: #ffffff;
+	background: #E6E6FA;;
 }
 
 /* Navigation */
 nav {
-	background: #ffffff;
+	background: #CCFF99;
 }
 nav a {
 	color: #EBA328;
@@ -52,12 +52,12 @@ nav a:hover, nav a:focus {
 /* Contenu principal */
 #contenu {
 	color: #363B29;
-	background: #cbd888;
+	
 }
 #contenu a {
 	color: #332510;
 }
-#contenu a:hover, #contenu a:focus {
+ a:hover, #contenu a:focus {
 	color: #6E5122;
 }
 #contenu strong {

@@ -4,7 +4,7 @@
     <div class="container">
 
         <!-- Header -->
-        <?php require_once(PATH_VIEWS.'headerstudent.php'); ?>
+        <?php require_once(PATH_VIEWS.'headerstudents.php'); ?>
 
         <h2>Bienvenue <?php echo $name_student[0]->last_name().' '.$name_student[0]->first_name();?></h2>
 

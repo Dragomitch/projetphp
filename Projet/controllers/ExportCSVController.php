@@ -1,6 +1,6 @@
 <?php
 
-class ExporterCSVController{
+class ExportCSVController{
 
     public function __construct(){
 

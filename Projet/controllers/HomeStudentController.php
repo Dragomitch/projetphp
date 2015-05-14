@@ -1,6 +1,6 @@
 <?php
 
-class AcceuilEleveController{
+class HomeStudentController{
 
     public function __construct() {
 
@@ -15,7 +15,7 @@ class AcceuilEleveController{
             die ();
         }
         # Un contrôleur se termine en écrivant une vue
-        require_once(PATH_VIEWS . 'acceuileleve.php');
+        require_once(PATH_VIEWS . 'homestudent.php');
     }
 
 }

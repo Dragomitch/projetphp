@@ -14,7 +14,7 @@ class HomeTeacherController{
             die ();
         }
         # Un contrôleur se termine en écrivant une vue
-        require_once(PATH_VIEWS . 'acceuilprof.php');
+        require_once(PATH_VIEWS . 'hometeacher.php');
     }
 
 }

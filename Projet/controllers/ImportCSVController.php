@@ -1,7 +1,7 @@
 <?php
 class ImportCSVController{
 	public function __construct(){
-		
+
 	}
     public function run(){
 
@@ -85,7 +85,7 @@ class ImportCSVController{
         }
     }
 
-	require_once(PATH_VIEWS . "importerCSV.php");
+	require_once(PATH_VIEWS . "importCSV.php");
 
     }
 
