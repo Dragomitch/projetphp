@@ -91,7 +91,19 @@
 					</p>
 				</form>
 			</div>
-        <?php if($show_answer){?>
+			
+			
+        <?php if($show_answer ){?>
+                	<?php if(isset($notificationStud)){?>
+                	<p id='notification' > <?php echo $notificationStud; ?></p>
+                	<?php }else {?>
+                	
+                	<h2>Votre Réponse</h2>
+			<p>
+				<span class="html">
+				<?php echo $tabanswer[0]->answer_query();?>
+				</span>
+			</p>
                 	<table id="tableBalises">
 
 				<tr>
@@ -117,6 +129,7 @@
                <?php }?>
 		</tr>
 		<?php }?>
+		<?php } ?>
 
             </tr>
 
@@ -126,13 +139,15 @@
 
 
 			<h2>Réponse Attendue</h2>
-			<p>
+			<?php if(isset($notificationTeacher)){ ?>
+			<p id='notification'><?php echo $notificationTeacher; ?></p>
+			<?php } else{ ?>
 				<table id="tableBalises">
 
 				<tr>
-               <?php for($j=0;$j<count($tabNamesColumns);$j++){?>
+               <?php for($j=0;$j<count($tabNamesColumnsTeacher);$j++){?>
             	
-               <?php echo '<th>' .$tabNamesColumns[$j]. '</th>'?>
+               <?php echo '<th>' .$tabNamesColumnsTeacher[$j]. '</th>'?>
                	
                <?php }?>
 				
@@ -145,8 +160,8 @@
 				
 				
 				<tr>
-					  <?php for($j=0;$j<count($tabNamesColumns);$j++){?>
-					<?php echo '<td>'. $tab_show_answer_teacher[$k][$tabNamesColumns[$j]].'</td>';?>
+					  <?php for($j=0;$j<count($tabNamesColumnsTeacher);$j++){?>
+					<?php echo '<td>'. $tab_show_answer_teacher[$k][$tabNamesColumnsTeacher[$j]].'</td>';?>
 				
 				
                <?php }?>
@@ -156,14 +171,9 @@
             </tr>
 
 			</table>
+			<?php }?>
+			</p>
 			
-			</p>
-			<h2>Votre Réponse</h2>
-			<p>
-				<span class="html">
-				<?php echo $tabanswer[0]->answer_query();?>
-				</span>
-			</p>
         <?php }?>
     </div>
 

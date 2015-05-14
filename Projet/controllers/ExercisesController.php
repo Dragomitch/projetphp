@@ -16,6 +16,8 @@ class ExercisesController{
         $tabexercises=Db::getInstance()->select_exercise($level);
         $num_level=Db::getInstance()->select_num_level($level);
         $show_answer=false;
+       
+        
         #i = num_exercise; $i is the current exercise displayed
       if(isset($_GET['exercise'])){
        $i=$_GET['exercise']-1;
@@ -48,14 +50,30 @@ class ExercisesController{
                 $show_answer = true;
                 $matricule = $_SESSION ['login'];
                 $answer=$_POST['answer'];
+                try {
+                	
+                	$tabshowanswer=Db::getInstance()->show_answer_DB($answer);
+                	Db::getInstance()->save_answer($matricule, $_POST['number_ex'], htmlentities($_POST['answer']));
+                	$tabanswer =Db::getInstance()->select_answer($matricule, $_POST['number_ex']);
+                	$tabNamesColumns=Db::getInstance()->getColumnsNames($answer);
+                } catch (PDOException $pdoException) {
+                	$notificationStud="Voici l'erreur envoyee par la base de donnee :".$pdoException.error_get_last();
+                }
                 
                 
-                Db::getInstance()->save_answer($matricule, $_POST['number_ex'], htmlentities($_POST['answer']));
-                $tabanswer =Db::getInstance()->select_answer($matricule, $_POST['number_ex']);
-                $tabNamesColumns=db::getInstance()->getColumnsNames($answer);
-                $tabshowanswer=Db::getInstance()->show_answer_DB($answer);
-                $tab_show_answer_teacher=Db::getInstance()->show_answer_DB($tabexercises[$i]->query());
-				$number_question=$i;
+                
+               
+                
+                try {
+                	$tab_show_answer_teacher=Db::getInstance()->show_answer_DB($tabexercises[$i]->query());
+                	
+                	$tabNamesColumnsTeacher=Db::getInstance()->getColumnsNames($tabexercises[$i]->query());
+                } catch (PDOException $pdoException) {
+                	$notificationTeacher="Voici l'erreur vient de la base de donnee des profs ".$pdoException.error_get_last();
+                }
+
+                
+
             }
 
         

@@ -81,6 +81,10 @@ switch($action) {
         require_once('controllers/StatEtudiantController.php');
         $controller = new StatEtudiantController();
         break;
+    case 'studentEx':
+    	require_once ('controllers/ShowStudentExController.php');
+    	$controller = new ShowStudentExController();
+    	break;    
 
     default: # Par défaut, le contrôleur de l'accueil est sélectionné
         require_once('controllers/LoginController.php');

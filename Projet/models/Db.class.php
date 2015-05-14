@@ -213,6 +213,20 @@ class Db
         return $tableau;
     }
     
+    public function select_all_answer_student($matricule){
+    	$query ='SELECT * FROM `students_answers` WHERE `student`='.$this->_db->quote($matricule).'';
+    	$result =$this->_db->query($query);
+    	$tableau=array();
+    	if ($result->rowcount()!=0) {
+    		while ($row = $result->fetch()) {
+    			$tableau[] = new students_answers($row->number, $row->answer_query, $row->exercise, $row->student);
+    		}
+    	}
+    	
+    	return $tableau;
+    	
+    }
+    
     public function show_answer_DB($answer){
     	/*$query=$answer;
     	$result =$this->_db->query($query);
