@@ -55,7 +55,7 @@ class ImportCSVController{
 
                                 $exercise= array($queryValues[0], $queryValues[1], $queryValues[2], $queryValues[3], $queryValues[4], $level_label, $level_num);
 
-                                try {
+                                try {//TODO faire un try catch sur les insertStudent et insertTeacher aussi
 
                                     Db::getInstance()->insertQuery($exercise);
                                     $notification= 'Les queries ont été correctement importées dans le niveau '.$level_label.'.';
@@ -120,6 +120,6 @@ class ImportCSVController{
             return 'NULL';
         else
             return trim($queryValue);
-    }
+    }//TODO strpos pour faire une recherche sur une str,
 }
 ?>

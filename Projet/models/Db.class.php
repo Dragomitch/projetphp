@@ -40,7 +40,9 @@ class Db
 
         $query="INSERT INTO students (matricule, first_name, last_name) VALUES (:matricule, :first_name, :last_name)";
         $statement= $this->_db->prepare($query);
-        $statement->bindParam(':matricule', $array[0]);
+        $matricule= (int) trim($array[0], '"');
+
+        $statement->bindParam(':matricule', $matricule);
         $statement->bindParam(':first_name', $array[1]);
         $statement->bindParam(':last_name', $array[2]);
         $statement->execute();
