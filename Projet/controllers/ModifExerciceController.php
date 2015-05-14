@@ -24,8 +24,8 @@ class ModifExerciceController{
 //         $statement=hmtlentities($_POST['statement']);
 //         $theme=hmtlentities($_POST['theme']);
 $afficher=false;
-$i;
-$tabexercises;
+$i=0;
+$tabexercises= null;
 if (!empty($_POST['num_exercise']) AND !empty($_POST['num_level'])){
         $num_exercise= htmlentities($_POST['num_exercise']);
         $i=$num_exercise-1;

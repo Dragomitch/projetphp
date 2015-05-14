@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abb7ed8-8fda-46eb-a31a-f85e5a4ce72f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ListeEtudiantController.php" afterPath="$PROJECT_DIR$/controllers/ListeEtudiantController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ModifExerciceController.php" afterPath="$PROJECT_DIR$/controllers/ModifExerciceController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projet.iws" />
@@ -69,36 +71,117 @@
       <file leaf-file-name="Db.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Db.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="4675">
-              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state vertical-scroll-proportion="-149.07692" vertical-offset="0" max-vertical-offset="4624">
+              <caret line="228" column="9" selection-start-line="228" selection-start-column="9" selection-end-line="228" selection-end-column="9" />
               <folding>
-                <marker date="1431596299950" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="1855:1892" placeholder="SELECT level..levels..." />
-                <marker date="1431596299950" expanded="true" signature="2054:2241" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="2921:3033" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="3354:3432" placeholder="SELECT * fro..teachers..." />
-                <marker date="1431596299950" expanded="true" signature="3698:3784" placeholder="SELECT * fro..students..." />
-                <marker date="1431596299950" expanded="true" signature="4050:4189" placeholder="UPDATE stude..." />
-                <marker date="1431596299950" expanded="true" signature="4602:4624" placeholder="SELECT * FRO..students..." />
-                <marker date="1431596299950" expanded="true" signature="4948:5022" placeholder="SELECT * FRO..." />
-                <marker date="1431596299950" expanded="true" signature="5365:5435" placeholder="SELECT * FRO..exercises..." />
-                <marker date="1431596299950" expanded="true" signature="5817:5837" placeholder="SELECT * FRO..levels..." />
-                <marker date="1431596299950" expanded="true" signature="6126:6159" placeholder="SELECT * FRO..levels..." />
-                <marker date="1431596299950" expanded="true" signature="6504:6645" placeholder="SELECT * FRO..." />
-                <marker date="1431596299950" expanded="true" signature="7019:7225" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="7520:7654" placeholder="SELECT * FRO..." />
-                <marker date="1431596299950" expanded="true" signature="8079:8162" placeholder="SELECT * FRO..." />
+                <marker date="1431603997200" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="907:1001" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="1856:1893" placeholder="SELECT level..levels..." />
+                <marker date="1431603997200" expanded="true" signature="2055:2242" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="2871:2983" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="3051:3113" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="3304:3382" placeholder="SELECT * fro..teachers..." />
+                <marker date="1431603997200" expanded="true" signature="3483:3561" placeholder="SELECT * fro..teachers..." />
+                <marker date="1431603997200" expanded="true" signature="3648:3734" placeholder="SELECT * fro..students..." />
+                <marker date="1431603997200" expanded="true" signature="4000:4139" placeholder="UPDATE stude..." />
+                <marker date="1431603997200" expanded="true" signature="4552:4574" placeholder="SELECT * FRO..students..." />
+                <marker date="1431603997200" expanded="true" signature="4898:4972" placeholder="SELECT * FRO..." />
+                <marker date="1431603997200" expanded="true" signature="5315:5385" placeholder="SELECT * FRO..exercises..." />
+                <marker date="1431603997200" expanded="true" signature="5421:5491" placeholder="SELECT * FRO..exercises..." />
+                <marker date="1431603997200" expanded="true" signature="5767:5787" placeholder="SELECT * FRO..levels..." />
+                <marker date="1431603997200" expanded="true" signature="6076:6109" placeholder="SELECT * FRO..levels..." />
+                <marker date="1431603997200" expanded="true" signature="6454:6595" placeholder="SELECT * FRO..." />
+                <marker date="1431603997200" expanded="true" signature="6969:7175" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="7239:7520" placeholder="INSERT INTO ..." />
+                <marker date="1431603997200" expanded="true" signature="7470:7604" placeholder="SELECT * FRO..." />
+                <marker date="1431603997200" expanded="true" signature="8029:8112" placeholder="SELECT * FRO..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="importerCSV.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateDATABASE-And-CreateTABLES.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.392857" vertical-offset="0" max-vertical-offset="19924">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModifExerciceController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/ModifExerciceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="1054">
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListeEtudiantController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/ListeEtudiantController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="578">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queries_1.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSV/queries_1.csv">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.4285715" vertical-offset="0" max-vertical-offset="714">
+              <caret line="4" column="138" selection-start-line="4" selection-start-column="138" selection-end-line="4" selection-end-column="138" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Levels.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Levels.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="510">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="etudiants.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/etudiants.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
+              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="importerCSV.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/importerCSV.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="918">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="612">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportCSVController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="2346">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,6 +193,11 @@
     <option name="myUpdateMethod" value="REBASE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Dragomitch" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -130,7 +218,6 @@
         <option value="$PROJECT_DIR$/views/uploadCSV.php" />
         <option value="$PROJECT_DIR$/controllers/ImporterCSVController.php" />
         <option value="$PROJECT_DIR$/controllers/AcceuilProfController.php" />
-        <option value="$PROJECT_DIR$/controllers/ModifExerciceController.php" />
         <option value="$PROJECT_DIR$/controllers/ExporterCSVController.php" />
         <option value="$PROJECT_DIR$/controllers/ExercicesController.php" />
         <option value="$PROJECT_DIR$/controllers/DeconnexionController.php" />
@@ -139,7 +226,6 @@
         <option value="$PROJECT_DIR$/controllers/HomeTeacherController.php" />
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="$PROJECT_DIR$/views/firstlogin.php" />
-        <option value="$PROJECT_DIR$/controllers/ListeEtudiantController.php" />
         <option value="$PROJECT_DIR$/controllers/FirstLoginController.php" />
         <option value="$PROJECT_DIR$/models/Exercises.class.php" />
         <option value="$PROJECT_DIR$/controllers/ExercisesController.php" />
@@ -156,10 +242,14 @@
         <option value="$PROJECT_DIR$/views/header.php" />
         <option value="$PROJECT_DIR$/views/exercices.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/views/importerCSV.php" />
+        <option value="$PROJECT_DIR$/models/Db.class.php" />
         <option value="$PROJECT_DIR$/controllers/ImportCSVController.php" />
         <option value="$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql" />
-        <option value="$PROJECT_DIR$/models/Db.class.php" />
-        <option value="$PROJECT_DIR$/views/importerCSV.php" />
+        <option value="$PROJECT_DIR$/models/Levels.class.php" />
+        <option value="$PROJECT_DIR$/controllers/ModifExerciceController.php" />
+        <option value="$PROJECT_DIR$/controllers/ListeEtudiantController.php" />
+        <option value="$PROJECT_DIR$/CSV/queries_1.csv" />
       </list>
     </option>
   </component>
@@ -489,7 +579,19 @@
       <option name="project" value="LOCAL" />
       <updated>1431596571497</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="_Correction de l'importation des etudiants: retrait des doubles-quotes (&quot;) des donnees&#10;_Correction de l'encodage des queries et de leur affichage">
+      <created>1431596696294</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1431596696294</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'partieRomain' into partiePhilippe&#10;&#10;Conflicts:&#10;&#9;Projet/CSV/queries_1.csv&#10;&#9;Projet/CreateTable/CreateDATABASE-And-CreateTABLES.sql&#10;&#9;Projet/controllers/ImportCSVController.php&#10;&#9;Projet/etudiants.csv&#10;&#9;Projet/models/Db.class.php&#10;&#9;Projet/models/Levels.class.php&#10;&#9;Projet/professeurs.csv&#10;&#9;Projet/views/importerCSV.php&#10;">
+      <created>1431604631479</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1431604631479</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -561,7 +663,8 @@
     <MESSAGE value="_Petite coquille dans insertQuery modifie" />
     <MESSAGE value="_Version fusionnée entre partiePhilippe(d7b84f78f1d9ff3339cd1e5e3907674e486408b9) et partieRomain (4f897dc70e99adb35c70ddb07bbf2144e0324399)" />
     <MESSAGE value="_Correction de l'importation des etudiants: retrait des doubles-quotes (&quot;) des donnees&#10;_Correction de l'encodage des queries et de leur affichage" />
-    <option name="LAST_COMMIT_MESSAGE" value="_Correction de l'importation des etudiants: retrait des doubles-quotes (&quot;) des donnees&#10;_Correction de l'encodage des queries et de leur affichage" />
+    <MESSAGE value="Merge branch 'partieRomain' into partiePhilippe&#10;&#10;Conflicts:&#10;&#9;Projet/CSV/queries_1.csv&#10;&#9;Projet/CreateTable/CreateDATABASE-And-CreateTABLES.sql&#10;&#9;Projet/controllers/ImportCSVController.php&#10;&#9;Projet/etudiants.csv&#10;&#9;Projet/models/Db.class.php&#10;&#9;Projet/models/Levels.class.php&#10;&#9;Projet/professeurs.csv&#10;&#9;Projet/views/importerCSV.php&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'partieRomain' into partiePhilippe&#10;&#10;Conflicts:&#10;&#9;Projet/CSV/queries_1.csv&#10;&#9;Projet/CreateTable/CreateDATABASE-And-CreateTABLES.sql&#10;&#9;Projet/controllers/ImportCSVController.php&#10;&#9;Projet/etudiants.csv&#10;&#9;Projet/models/Db.class.php&#10;&#9;Projet/models/Levels.class.php&#10;&#9;Projet/professeurs.csv&#10;&#9;Projet/views/importerCSV.php&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -699,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ListeEtudiantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42592594" vertical-offset="0" max-vertical-offset="918">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Student.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="918">
@@ -739,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Levels.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2037037" vertical-offset="0" max-vertical-offset="918">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/AcceuilProfController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="944">
@@ -757,13 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="918">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ModifExerciceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="918">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -897,25 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851852" vertical-offset="0" max-vertical-offset="19924">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6815217" vertical-offset="1052" max-vertical-offset="2380">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3880435" vertical-offset="357" max-vertical-offset="2244">
@@ -924,10 +987,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/professeurs.csv">
+    <entry file="file://$PROJECT_DIR$/models/Db.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-149.07692" vertical-offset="0" max-vertical-offset="4624">
+          <caret line="228" column="9" selection-start-line="228" selection-start-column="9" selection-end-line="228" selection-end-column="9" />
+          <folding>
+            <marker date="1431603997200" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="907:1001" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="1856:1893" placeholder="SELECT level..levels..." />
+            <marker date="1431603997200" expanded="true" signature="2055:2242" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="2871:2983" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="3051:3113" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="3304:3382" placeholder="SELECT * fro..teachers..." />
+            <marker date="1431603997200" expanded="true" signature="3483:3561" placeholder="SELECT * fro..teachers..." />
+            <marker date="1431603997200" expanded="true" signature="3648:3734" placeholder="SELECT * fro..students..." />
+            <marker date="1431603997200" expanded="true" signature="4000:4139" placeholder="UPDATE stude..." />
+            <marker date="1431603997200" expanded="true" signature="4552:4574" placeholder="SELECT * FRO..students..." />
+            <marker date="1431603997200" expanded="true" signature="4898:4972" placeholder="SELECT * FRO..." />
+            <marker date="1431603997200" expanded="true" signature="5315:5385" placeholder="SELECT * FRO..exercises..." />
+            <marker date="1431603997200" expanded="true" signature="5421:5491" placeholder="SELECT * FRO..exercises..." />
+            <marker date="1431603997200" expanded="true" signature="5767:5787" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431603997200" expanded="true" signature="6076:6109" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431603997200" expanded="true" signature="6454:6595" placeholder="SELECT * FRO..." />
+            <marker date="1431603997200" expanded="true" signature="6969:7175" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="7239:7520" placeholder="INSERT INTO ..." />
+            <marker date="1431603997200" expanded="true" signature="7470:7604" placeholder="SELECT * FRO..." />
+            <marker date="1431603997200" expanded="true" signature="8029:8112" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Levels.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="510">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.392857" vertical-offset="0" max-vertical-offset="19924">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ModifExerciceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ListeEtudiantController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="578">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -937,50 +1058,32 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05635359" vertical-offset="0" max-vertical-offset="905">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state vertical-scroll-proportion="-2.4285715" vertical-offset="0" max-vertical-offset="714">
+          <caret line="4" column="138" selection-start-line="4" selection-start-column="138" selection-end-line="4" selection-end-column="138" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/etudiants.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.053911205" vertical-offset="0" max-vertical-offset="3281">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="4675">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
-          <folding>
-            <marker date="1431596299950" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="1855:1892" placeholder="SELECT level..levels..." />
-            <marker date="1431596299950" expanded="true" signature="2054:2241" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="2921:3033" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="3354:3432" placeholder="SELECT * fro..teachers..." />
-            <marker date="1431596299950" expanded="true" signature="3698:3784" placeholder="SELECT * fro..students..." />
-            <marker date="1431596299950" expanded="true" signature="4050:4189" placeholder="UPDATE stude..." />
-            <marker date="1431596299950" expanded="true" signature="4602:4624" placeholder="SELECT * FRO..students..." />
-            <marker date="1431596299950" expanded="true" signature="4948:5022" placeholder="SELECT * FRO..." />
-            <marker date="1431596299950" expanded="true" signature="5365:5435" placeholder="SELECT * FRO..exercises..." />
-            <marker date="1431596299950" expanded="true" signature="5817:5837" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431596299950" expanded="true" signature="6126:6159" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431596299950" expanded="true" signature="6504:6645" placeholder="SELECT * FRO..." />
-            <marker date="1431596299950" expanded="true" signature="7019:7225" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="7520:7654" placeholder="SELECT * FRO..." />
-            <marker date="1431596299950" expanded="true" signature="8079:8162" placeholder="SELECT * FRO..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/importerCSV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="918">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="612">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3888889" vertical-offset="0" max-vertical-offset="2346">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
