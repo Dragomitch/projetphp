@@ -20,6 +20,7 @@
                     <th>Matricule</th>
                     <th>Prenom</th>
                     <th>Nom</th>
+                    
 					<?php for($k=0;$k<count($tablevel);$k++){
 						if(count($tabexercise=Db::getInstance()->select_exercise($tablevel[$k]->level()))>1){ ?>
 					<th>Completer level <?php echo $tablevel[$k]->num_level();?></th>
@@ -32,6 +33,7 @@
                         <td><span class="html"><?php echo $tabstudents[$i]->matricule() ?></span></td>
                         <td><a href="index.php?action=studentEx&matricule=<?php echo $tabstudents[$i]->matricule() ?>"><span class="html"><?php echo $tabstudents[$i]->first_name()?></span></a></td>
                         <td><span class="html"><?php echo $tabstudents[$i]->last_name()?></span></td>
+                        
 						<?php for($k=0;$k<count($tablevel);$k++){ ?>
 						<?php $tabexercise=Db::getInstance()->select_exercise($tablevel[$k]->level());?>
 						<?php if(count($tabexercise)>1) { ?>

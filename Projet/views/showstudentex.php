@@ -20,7 +20,7 @@
                 <tr>
                     
 					<th>Numero Exercice</th>
-					<th>Querie de l'etudiant</th>
+					<th>Query de l'etudiant</th>
 					
 					
                 </tr>

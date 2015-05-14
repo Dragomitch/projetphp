@@ -263,7 +263,10 @@ class Db
         $query = 'UPDATE `sitephp`.`exercises` SET `query`= '.$this->_db->quote($query_update).',`statement`= '.$this->_db->quote($statement) .',`author`= '.$this->_db->quote($author) .',`theme`= '.$this->_db->quote($theme) .',`nb_lines`= '.$this->_db->quote($nb_lines) .' WHERE  `exercises`.`num_exercise`='.$this->_db->quote($num_exercise).'';
         $this->_db->prepare($query)->execute();
     }
-    
+    public function update_student_last_co($matricule,$last_co){
+    	$query='UPDATE `sitephp`.`students` SET `last_connection`= '.$this->_db->quote($last_co).' WHERE `matricule`='.$this->_db->quote($matricule).'';
+    	$this->_db->prepare($query)->execute();
+    }
     public function is_a_good_query($query){
     	$not_allowed_words=['delete','update','create','alter','insert','truncate','drop'];
     	$allowed=['bd1','bd2','bd3'];

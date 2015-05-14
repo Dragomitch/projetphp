@@ -14,6 +14,7 @@ class ListeEtudiantController{
 
         $tabstudents;
         $tabstudents=Db::getInstance()->select_students();
+        
         $tablevel=Db::getInstance()->select_level();
 		
 		

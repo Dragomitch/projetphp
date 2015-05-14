@@ -52,6 +52,8 @@
 					<span class="html"><?php echo $tabexercises[$i]->statement(); ?></span>
 				</p>
 				
+				<a id="niveau" href="views/css/image/niveau1.jpg"><img src="views/css/image/niveau1.jpg" alt="DSD niveau1" title="Cliquez pour agrandir" /></a>
+				
 			<?php if(empty($last_answer)){?>
 				<p>
 					<span class="html"><?php echo $notification_last_answer;?> </span>
