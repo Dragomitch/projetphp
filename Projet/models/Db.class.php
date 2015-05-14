@@ -250,6 +250,7 @@ class Db
 
 
     }
+
     public function getColumnsNames($query_send){
         $query = $query_send;
         $fetch_type = PDO::FETCH_ASSOC;

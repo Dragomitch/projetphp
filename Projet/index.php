@@ -94,7 +94,7 @@ switch($action) {
         require_once('controllers/DeconnexionController.php');
         $controller = new DeconnexionController();
         break;
-    case 'ExportCSV':
+    case 'exportCSV':
         require_once('controllers/ExporterCSVController.php');
         $controller = new ExporterCSVController();
         break;
