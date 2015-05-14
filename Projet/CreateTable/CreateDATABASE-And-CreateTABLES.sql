@@ -1,12 +1,15 @@
 ﻿CREATE DATABASE IF NOT EXISTS sitephp DEFAULT COLLATE = utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS sitephp.students(
-	matricule			INTEGER		auto_increment	PRIMARY KEY,
+	matricule			INTEGER		      	PRIMARY KEY,
 	first_name			CHAR(15) 					NOT NULL,
 	last_name			CHAR(15) 					NOT NULL,
 	password			CHAR(40)					NULL,
 	last_connection		DATETIME					NULL
 )ENGINE=InnoDB;
+
+INSERT INTO sitephp.students (matricule, first_name, last_name, password)
+VALUES ('1','1','1',sha1('1'));
 
 CREATE TABLE IF NOT EXISTS sitephp.teachers(
 	login				VARCHAR(15) 	PRIMARY KEY,

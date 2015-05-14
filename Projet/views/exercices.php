@@ -10,6 +10,7 @@
 			<!-- Header -->
 			<header id="header">
 				<div class="inner">
+                    <meta charset="utf-8">
 
 
 					<!-- Nav -->

@@ -26,7 +26,7 @@ class ImportCSVController{
      $notification= '';
 
 
-    $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');#
+    $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');#
 
     if(!empty($_FILES['CSVfile'])){
         if( $_FILES['CSVfile']['tmp_name'] !=  ''){//TODO rajouter notifications

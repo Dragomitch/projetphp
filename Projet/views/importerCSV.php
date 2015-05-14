@@ -11,7 +11,7 @@
     Assurez-vous que le fichier que vous voulez importer est correct.
 	</p>
  	
- 	<?php if(!empty($notification)) echo $notification ?><br>
+ 	<p id="notification"><?php if(!empty($notification)) echo $notification ?><br></p>
 
 	<form enctype="multipart/form-data" action="index.php?action=importCSV" method="POST">
 		<input type="hidden" name="MAX_FILE_SIZE" value="1000000">
@@ -21,7 +21,6 @@
 
     <p>Si vous voulez uploader des exercices, veuillez rentrer un nom de niveau et un numéro de niveau<br>
     <!--  TODO Faire en sorte que les champs qui suivent ne soient visibles que si l'on selectionne uploadQueries  -->
-    <!-- TODO rajouter un champ pour préciser un label-->
 
         Le nom du niveau où l'on veut importer les exercices:<input type="text" name="level_label"><br>
         Le numéro du niveau où l'on veut importer les exercices: <input type="text" name="level_num"><br>
