@@ -3,6 +3,12 @@ class ImportCSVController{
 	public function __construct(){
 		
 	}
+    /**
+    *TODO IL FAUT <---- que les étudiants et les profs soient importés lors du premier lancement de l'application s'il n'y en a pas
+    *Les DB sont censées exister, pas besoin de les importer.
+    *
+    *
+    */
 
     public function run(){
 
@@ -16,8 +22,8 @@ class ImportCSVController{
 
      $notification= '';
 
-
     $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');#
+
 
     if(!empty($_FILES['CSVfile'])){
         if( $_FILES['CSVfile']['tmp_name'] !=  ''){//TODO rajouter notifications
@@ -44,6 +50,7 @@ class ImportCSVController{
                     $level_label= htmlentities($_POST['level_label']);
                     $level_num= htmlentities($_POST['level_num']);
                     if($this->isAValidLevel($level_label, $level_num)){
+
                         Db::getInstance()->insertLevel($level_label, $level_num);
                         foreach ($file as $index => $queryData) {
                             if ($index > 0) {

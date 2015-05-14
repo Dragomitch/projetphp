@@ -9,7 +9,7 @@
     <p>Cette secion va vous permettre d'importer des fichiers CSV dans votre DB.<br>
         Assurez-vous que le fichier que vous voulez uploader est correct avant de tenter d'uploader.
     </p>
- 	
+
 
 	<form enctype="multipart/form-data" action="index.php?action=importCSV" method="POST">
 		<input type="hidden" name="MAX_FILE_SIZE" value="1000000">

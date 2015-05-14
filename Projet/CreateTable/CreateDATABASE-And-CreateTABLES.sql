@@ -8,6 +8,9 @@ CREATE TABLE IF NOT EXISTS sitephp.students(
 	last_connection		DATETIME					NULL
 )ENGINE=InnoDB;
 
+INSERT INTO sitephp.students (matricule, first_name, last_name, password)
+VALUES ('1','1','1',sha1('1'));
+
 CREATE TABLE IF NOT EXISTS sitephp.teachers(
 	login				VARCHAR(15) 	PRIMARY KEY,
 	first_name			CHAR(15)	NOT NULL,

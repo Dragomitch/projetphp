@@ -13,11 +13,17 @@ class ListeEtudiantController{
         }
 
         $tabstudents;
-
-        # Selection of all the student to display
         $tabstudents=Db::getInstance()->select_students();
+        $tablevel=Db::getInstance()->select_level();
+		
+		
+		
+        # Selection of all the student to display
+       
 
 
+        
+        
 
         require_once(PATH_VIEWS . 'listeetudiant.php');
     }

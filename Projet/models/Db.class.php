@@ -7,16 +7,16 @@ class Db
     private function __construct()
     {
         try {
-            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');#210993
+            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp;charset=UTF8', 'root','210993');
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-			$this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-        } 
-		catch (PDOException $e) {
-		    die('Erreur de connexion à la base de données : '.$e->getMessage());
+            $this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+        }
+        catch (PDOException $e) {
+            die('Erreur de connexion à la base de données : '.$e->getMessage());
         }
     }
 
-	# Pattern Singleton
+    # Pattern Singleton
     public static function getInstance()
     {
         if (is_null(self::$instance)) {
@@ -25,10 +25,13 @@ class Db
         return self::$instance;
     }
 
-        public function insertTeacher($array) {
+    public function insertTeacher($array) {
 
         $query="INSERT INTO teachers (login, first_name, last_name) VALUES (:login, :first_name, :last_name)";
         $statement = $this->_db->prepare($query);
+
+
+
         $statement->bindParam(':login', $array[0]);
         $statement->bindParam(':first_name', $array[1]);
         $statement->bindParam(':last_name', $array[2]);
@@ -40,16 +43,20 @@ class Db
 
         $query="INSERT INTO students (matricule, first_name, last_name) VALUES (:matricule, :first_name, :last_name)";
         $statement= $this->_db->prepare($query);
-        $matricule= (int) trim($array[0], '"');
 
+        $matricule= (int) trim($array[0], '"');
+        $first_name= trim($array[2]);//pour enlever le caractère de retour à la ligne
+        $first_name= trim($first_name,'"');
+        $last_name= trim($array[1], '"');
         $statement->bindParam(':matricule', $matricule);
-        $statement->bindParam(':first_name', $array[1]);
-        $statement->bindParam(':last_name', $array[2]);
+        $statement->bindParam(':first_name', $first_name);
+        $statement->bindParam(':last_name', $last_name);
+
         $statement->execute();
 
     }
 
-	public function insertQuery($exercise){
+    public function insertQuery($exercise){
         $query= 'SELECT level FROM levels WHERE label='.$this->_db->quote($exercise[5]);
         $resultat= $this->_db->query($query);
         $row= $resultat->fetch();
@@ -79,13 +86,12 @@ class Db
         $this->_db->prepare($query)->execute();
 
         /*$lastInsert= $this->_db->lastInsertId();
-        $query= "UPDATE levels SET num_level=".$lastInsert." WHERE level=".$lastInsert;
-        $this->_db->prepare($query)->execute();*/
-
+         $query= "UPDATE levels SET num_level=".$lastInsert." WHERE level=".$lastInsert;
+         $this->_db->prepare($query)->execute();*/
     }
 
-	public function valid_teacher($login,$password){
-		$query = 'SELECT * from teachers WHERE login='.$this->_db->quote($login).' AND password='.$this->_db->quote(sha1($password));
+    public function valid_teacher($login,$password){
+        $query = 'SELECT * from teachers WHERE login='.$this->_db->quote($login).' AND password='.$this->_db->quote(sha1($password));
         $result = $this->_db->query($query);
 		$authenticated = false;
 		if ($result->rowcount()!=0) {
@@ -93,7 +99,7 @@ class Db
 		}
 		return $authenticated;
 	}
-	
+
 	public function valid_student($matricule,$password){
 		$query = 'SELECT * from students WHERE matricule='.$this->_db->quote($matricule).' AND password='.$this->_db->quote(sha1($password));
 		$result = $this->_db->query($query);
@@ -103,20 +109,20 @@ class Db
 		}
 		return $authenticated;
 	}
-    
+
 	public function update_mdp_Student($matricule,$password) {
-		$query = 'UPDATE students SET password= '.$this->_db->quote(sha1($password)).' WHERE matricule=' .$this->_db->quote($matricule).'';
+		$query = 'UPDATE students SET password= '.$this->_db->quote(sha1($password)).' WHERE matricule=' .$this->_db->quote($matricule).'AND password is NULL';
 		$this->_db->prepare($query)->execute();
 	#toDo secure password modification !
 	}
-	
-				
-		public function update_mdp_Teacher($login,$password) {	
-		$query = 'UPDATE `sitephp`.`teachers` SET `password`= SHA1('.$this->_db->quote($password).') WHERE `teachers`.`login`=' .$this->_db->quote($login).'';
+
+
+		public function update_mdp_Teacher($login,$password) {
+		$query = 'UPDATE `sitephp`.`teachers` SET `password`= SHA1('.$this->_db->quote($password).') WHERE `teachers`.`login`=' .$this->_db->quote($login).'AND password is NULL';
 		$this->_db->prepare($query)->execute();
 	}
-	
-	
+
+
 	public function select_students(){
 		$query = 'SELECT * FROM students';
 		$tableau = array();
@@ -126,20 +132,32 @@ class Db
 				$tableau[] = new Student($row->matricule,$row->first_name,$row->last_name,$row->password);
 						}
 		}
-		
+
 		return $tableau;
 	}
-	
+	public function select_name_student($matricule){
+		$query = 'SELECT * FROM `sitephp`.`students` WHERE `sitephp`.`students`.`matricule`='.$this->_db->quote($matricule);
+		$tableau=array();
+		$result = $this->_db->query($query);
+		if ($result->rowcount()!=0) {
+			while ($row = $result->fetch()) {
+				$tableau[] = new Student($row->matricule,$row->first_name,$row->last_name,$row->password);
+			}
+		}
+
+		return $tableau;
+
+	}
 	public function select_exercise($level){
 		$query = 'SELECT * FROM exercises where num_level='.$this->_db->quote($level).'';
 		$tableau = array();
 		$result =$this->_db->query($query);
 		if ($result->rowcount()!=0) {
 			while ($row = $result->fetch()) {
-				$tableau[] = new Exercises($row->author,$row->label,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
+				$tableau[] = new Exercises($row->author,$row->last_modification,$row->nb_lines,$row->number,$row->num_exercise,$row->num_level,$row->query,$row->statement,$row->theme);
 			}
 		}
-	
+
 		return $tableau;
 	}
 
@@ -149,21 +167,48 @@ class Db
 		$result =$this->_db->query($query);
 		if ($result->rowcount()!=0) {
 			while ($row = $result->fetch()) {
-				$tableau[] = new Levels($row->label,$row->level, $row->num_level);
+				$tableau[] = new Levels($row->label,$row->level,$row->num_level);
 			}
 		}
-	
+
+		return $tableau;
+	}
+	public function select_num_level($level){
+		$query = 'SELECT * FROM levels where level='.$this->_db->quote($level);
+		$tableau = array();
+		$result =$this->_db->query($query);
+		if ($result->rowcount()!=0) {
+			while ($row = $result->fetch()) {
+				$tableau[] = new Levels($row->label,$row->level,$row->num_level);
+			}
+		}
+
 		return $tableau;
 	}
 
     public function save_answer($matricule,$question_num,$answer){
-        $query ='INSERT INTO `sitephp`.`students_answers` (`number`, `answer_query`, `exercise`, `student`) VALUES (NULL,'.$this->_db->quote($answer).','.$this->_db->quote($question_num).','.$this->_db->quote($matricule).')';
-        $this->_db->prepare($query)->execute();
+	$select_answer='SELECT * FROM `sitephp`.`students_answers` WHERE student='.$this->_db->quote($matricule).' AND exercise='.$this->_db->quote($question_num).'';
+	$result = $this->_db->query($select_answer);
+    	if ($result->rowcount()!=0){
+    		$query_update='UPDATE `sitephp`.`students_answers` SET answer_query ='.$this->_db->quote($answer).' WHERE student='.$this->_db->quote($matricule).' AND exercise='.$this->_db->quote($question_num).'';
+    		$this->_db->prepare($query_update)->execute();
+    	}else{
+    		$query_insert='INSERT INTO `sitephp`.`students_answers` (`number`, `answer_query`, `exercise`, `student`) VALUES (NULL,'.$this->_db->quote($answer).','.$this->_db->quote($question_num).','.$this->_db->quote($matricule).')';
+    		$this->_db->prepare($query_insert)->execute();
+    	}
+
+        $authenticated = false;
+        if ($result->rowcount()!=0) {
+            $authenticated = true;
+        }
+        return $authenticated;
     }
 
     public function select_answer($matricule,$question_num){
         $query ='SELECT * FROM `students_answers` WHERE `exercise`='.$this->_db->quote($question_num).'AND `student`='.$this->_db->quote($matricule).'';
         $result =$this->_db->query($query);
+		$tableau=array();
+        $tableau=array();
         if ($result->rowcount()!=0) {
             while ($row = $result->fetch()) {
                 $tableau[] = new students_answers($row->number, $row->answer_query, $row->exercise, $row->student);
@@ -172,4 +217,51 @@ class Db
 
         return $tableau;
     }
+
+    public function select_all_answer_student($matricule){
+        $query ='SELECT * FROM `students_answers` WHERE `student`='.$this->_db->quote($matricule).'';
+        $result =$this->_db->query($query);
+        $tableau=array();
+        if ($result->rowcount()!=0) {
+            while ($row = $result->fetch()) {
+                $tableau[] = new students_answers($row->number, $row->answer_query, $row->exercise, $row->student);
+            }
+        }
+
+        return $tableau;
+
+    }
+
+    public function show_answer_DB($answer){
+        /*$query=$answer;
+        $result =$this->_db->query($query);
+        if ($result->rowcount()!=0) {
+            return $result;
+        }*/
+
+        $query = $answer;
+        $fetch_type = PDO::FETCH_ASSOC;
+        $result = $this->_db->query($query);
+        var_dump($query);
+        $rows = $result->fetchAll($fetch_type);
+        $columns = empty($rows) ? array() : array_keys($rows[0]);
+
+        return $rows;
+
+
+    }
+    public function getColumnsNames($query_send){
+        $query = $query_send;
+        $fetch_type = PDO::FETCH_ASSOC;
+        $result = $this->_db->query($query);
+        $rows = $result->fetchAll($fetch_type);
+        $columns = empty($rows) ? array() : array_keys($rows[0]);
+        return $columns;
+    }
+
+    public function update_query($query_update,$author,$num_exercise,$nb_lines,$num_level,$statement,$theme) {
+        $query = 'UPDATE `sitephp`.`exercises` SET `query`= '.$this->_db->quote($query_update).',`statement`= '.$this->_db->quote($statement) .',`author`= '.$this->_db->quote($author) .',`theme`= '.$this->_db->quote($theme) .',`nb_lines`= '.$this->_db->quote($nb_lines) .' WHERE  `exercises`.`num_exercise`='.$this->_db->quote($num_exercise).'';
+        $this->_db->prepare($query)->execute();
+    }
+
 }

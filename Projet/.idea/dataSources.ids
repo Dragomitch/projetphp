@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - sitephp@localhost" uuid="c7be3a5e-2a81-413e-917f-81f0cff1072f">
+    <database-info product="MySQL" version="5.6.13" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="sitephp"/>
+    <table name="exercises" schema="" catalog="sitephp" type="TABLE">
+      <column name="number" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="theme" sqlType="VARCHAR" precision="60" scale="0" nullable="true" jdbcType="12"/>
+      <column name="statement" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
+      <column name="query" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="nb_lines" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="label" sqlType="VARCHAR" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_modification" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="num_exercise" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="author" sqlType="CHAR" precision="9" scale="0" nullable="true" jdbcType="1"/>
+      <column name="num_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="number"/>
+      <foreign-key name="exercises_ibfk_1" columns="author" ref-table="teachers" ref-schema="" ref-catalog="sitephp" ref-columns="login" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="exercises_ibfk_2" columns="num_level" ref-table="levels" ref-schema="" ref-catalog="sitephp" ref-columns="level" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="students_answers_ibfk_1" table="students_answers" schema="" catalog="sitephp" columns="exercise"/>
+      <index name="fk_author" unique="false" columns="author"/>
+      <index name="fk_num_level" unique="false" columns="num_level"/>
+    </table>
+    <table name="levels" schema="" catalog="sitephp" type="TABLE">
+      <column name="level" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="num_level" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="label" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="level"/>
+      <exported-key name="exercises_ibfk_2" table="exercises" schema="" catalog="sitephp" columns="num_level"/>
+    </table>
+    <table name="students" schema="" catalog="sitephp" type="TABLE">
+      <column name="matricule" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="first_name" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1"/>
+      <column name="last_name" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1"/>
+      <column name="password" sqlType="CHAR" precision="40" scale="0" nullable="true" jdbcType="1"/>
+      <column name="last_connection" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="matricule"/>
+      <exported-key name="students_answers_ibfk_2" table="students_answers" schema="" catalog="sitephp" columns="student"/>
+    </table>
+    <table name="students_answers" schema="" catalog="sitephp" type="TABLE">
+      <column name="number" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="answer_query" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="exercise" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="student" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="number"/>
+      <foreign-key name="students_answers_ibfk_1" columns="exercise" ref-table="exercises" ref-schema="" ref-catalog="sitephp" ref-columns="number" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="students_answers_ibfk_2" columns="student" ref-table="students" ref-schema="" ref-catalog="sitephp" ref-columns="matricule" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_exercise" unique="false" columns="exercise"/>
+      <index name="fk_student" unique="false" columns="student"/>
+    </table>
+    <table name="teachers" schema="" catalog="sitephp" type="TABLE">
+      <column name="login" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="first_name" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1"/>
+      <column name="last_name" sqlType="CHAR" precision="15" scale="0" nullable="false" jdbcType="1"/>
+      <column name="password" sqlType="CHAR" precision="40" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="login"/>
+      <exported-key name="exercises_ibfk_1" table="exercises" schema="" catalog="sitephp" columns="author"/>
+    </table>
+  </data-source>
+</component>

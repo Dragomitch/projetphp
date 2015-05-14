@@ -1,7 +1,7 @@
 <?php
 class Exercises{
 	private $_author;
-	private $_label;
+	
 	private $_last_modification;
 	private $_nb_lines;
 	private $_number;
@@ -11,9 +11,8 @@ class Exercises{
 	private $_statement;
 	private $_theme;
 	
-	public function __construct($author,$label,$lastmodif,$nb_lines,$number,$num_exercise,$num_level,$query,$statement,$theme){
+	public function __construct($author,$lastmodif,$nb_lines,$number,$num_exercise,$num_level,$query,$statement,$theme){
 		$this->_author =$author;
-		$this->_label=$label;
 		$this->_last_modification=$lastmodif;
 		$this->_nb_lines=$nb_lines;
 		$this->_number=$number;
@@ -27,9 +26,7 @@ class Exercises{
 	public function author(){
 		return $this->_author;
 	}
-	public function label(){
-		return $this->_label;
-	}
+	
 	public function last_modification(){
 		return $this->_last_modification;
 	}

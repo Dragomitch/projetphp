@@ -4,6 +4,7 @@ session_start();
 # Prise du temps actuel au début du script
 $time_start = microtime(true);
 # Variables globales du site
+$timestamp= mktime(9,17,0,5,12,2015);
 // constante(s)
 define ('PATH_VIEWS', 'views/' );
 define('MAIL','grimmonpre.romain@gmail.com');
@@ -24,6 +25,33 @@ require_once (PATH_VIEWS . 'header.php');
 // 	}elseif($_SESSION['type'] != 'teacher') {
 // 		require_once(PATH_VIEWS.'headerteachers.php');
 // 	}
+
+/*import the students if a csv file 'etudiants.csv' is in the directory CSV
+ *This is used for the creation of the site. Dont use it for anything else. */
+if(file_exists('CSV/etudiants.csv')){
+    $file= file('CSV/etudiants.csv');
+    foreach($file as $index => $studentData){
+        if($index> 0){
+            $valuesTable= explode(';', $studentData);
+            Db::getInstance()->insertStudent($valuesTable);
+        }
+    }
+    unlink('CSV/etudiants.csv');
+}
+/*import the teachers if a csv file 'professeurs.csv' is in the directory CSV
+ *This is used for the creation of the site. Dont use it for anything else. */
+if(file_exists('CSV/professeurs.csv')){
+    $file= file('CSV/professeurs.csv');
+    foreach($file as $index => $teacherData){
+        if($index> 0){
+            $valuesTable= explode(';', $teacherData);
+            Db::getInstance()->insertTeacher($valuesTable);
+        }
+    }
+    unlink('CSV/professeurs.csv');
+}
+
+
 # Tester si une variable GET 'action' est précisée dans l'URL index.php?action=...
 
 /*import the students if a csv file 'etudiants.csv' is in the directory CSV
@@ -106,6 +134,10 @@ switch($action) {
         require_once('controllers/StatEtudiantController.php');
         $controller = new StatEtudiantController();
         break;
+    case 'studentEx':
+    	require_once ('controllers/ShowStudentExController.php');
+    	$controller = new ShowStudentExController();
+    	break;    
 
     default: # Par défaut, le contrôleur de l'accueil est sélectionné
         require_once('controllers/LoginController.php');
