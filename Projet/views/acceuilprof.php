@@ -1,24 +1,20 @@
-<title>Signin IAnArch</title>
 
-<head>
-	<body class="homepage">
 
-		<!-- Header -->
-			<div id="header-wrapper">
+
+		
+			<div id="body_wrapper">
 				<div class="container">
 
-					<!-- Header -->
-						<header id="header">
-							<div class="inner">
+		
+									<div class="inner">
 							
-								<!-- Logo -->
-                                <h1><a href="index.php" id="logo">Ianarch</a></h1>
+								
 								
 								<!-- Nav -->
 									<?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
 							
 							</div>
-						</header>
+						
 
 					<!-- Banner -->
 						<div id="banner">
@@ -27,7 +23,7 @@
 	<li>Introduction au SQL</li>
 	<li>Introduction à la conception de données</li>
 </ul>
-</p>
+
 </h2>
 
 							<p>Ce site sert de support aux séances d'exercices liées à la première partie sur le SQL.</p>
@@ -37,4 +33,4 @@
 				</div>
 			</div>
 
-</head>
+

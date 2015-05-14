@@ -7,7 +7,7 @@ class Db
     private function __construct()
     {
         try {
-            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp;charset=UTF8', 'root','210993');
+            $this->_db = new PDO('mysql:host=localhost;dbname=sitephp;charset=UTF8', 'root','');
             $this->_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             $this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
         }
@@ -242,7 +242,7 @@ class Db
         $query = $answer;
         $fetch_type = PDO::FETCH_ASSOC;
         $result = $this->_db->query($query);
-        var_dump($query);
+        
         $rows = $result->fetchAll($fetch_type);
         $columns = empty($rows) ? array() : array_keys($rows[0]);
 
@@ -263,5 +263,24 @@ class Db
         $query = 'UPDATE `sitephp`.`exercises` SET `query`= '.$this->_db->quote($query_update).',`statement`= '.$this->_db->quote($statement) .',`author`= '.$this->_db->quote($author) .',`theme`= '.$this->_db->quote($theme) .',`nb_lines`= '.$this->_db->quote($nb_lines) .' WHERE  `exercises`.`num_exercise`='.$this->_db->quote($num_exercise).'';
         $this->_db->prepare($query)->execute();
     }
+    
+    public function is_a_good_query($query){
+    	$not_allowed_words=['delete','update','create','alter','insert','truncate','drop'];
+    	$allowed=['bd1','bd2','bd3'];
+    	
+    	for($i=0;$i<count($not_allowed_words);$i++){
+    		if(strpos($query, $not_allowed_words[$i])!== FALSE){
+    			return false;
+    		}
+    	}
+    	for ($i=0;$i<count($allowed);$i++){
+    		if(strpos($query, $allowed[$i])!==FALSE){
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    
+    
 
 }

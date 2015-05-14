@@ -16,7 +16,7 @@ class ExercisesController{
         $tabexercises=Db::getInstance()->select_exercise($level);
         $num_level=Db::getInstance()->select_num_level($level);
         $show_answer=false;
-       
+        $matricule = $_SESSION ['login'];
         
         #i = num_exercise; $i is the current exercise displayed
       if(isset($_GET['exercise'])){
@@ -24,7 +24,11 @@ class ExercisesController{
       }
         if (isset($_POST)){
             if (!empty($_POST['nr_question'])){
+            	if($_POST['nr_question'] >= count($tabexercises) or $_POST['nr_question']<=0){
+            		$i=0;
+            	}else{
                 $i=htmlentities($_POST['nr_question'])-1;
+            	}
             }
             elseif (!empty($_POST['nr_question_suivant'])){
                 if($_POST['nr_question_suivant']==count($tabexercises)){
@@ -46,10 +50,21 @@ class ExercisesController{
                 }
             }
 
-            if(!empty($_POST['answer'])){
+            
+            try {
+            	$last_answer=Db::getInstance()->select_answer($matricule, $tabexercises[$i]->number());
+            	
+            	$notification_last_answer="Vous n'avez pas encore répondu à cette exercice !";
+            } catch (PDOException $pdoException) {
+            	$notification_last_answer="Vous n'avez pas encore répondu à cette exercice !";
+            }
+            
+            
+            if(!empty($_POST['answer']) AND Db::getInstance()->is_a_good_query($_POST['answer'])){
                 $show_answer = true;
-                $matricule = $_SESSION ['login'];
+                
                 $answer=$_POST['answer'];
+                
                 try {
                 	
                 	$tabshowanswer=Db::getInstance()->show_answer_DB($answer);

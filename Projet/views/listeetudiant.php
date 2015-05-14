@@ -1,26 +1,20 @@
-<title>IAnArch</title>
-
-</head>
-<body class="homepage">
 
 <!-- Header -->
-<div id="header-wrapper">
+<div id="body_wrapper">
     <div class="container">
 
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
+        
+            
 
-                <!-- Logo -->
-                <h1><a href="index.php" id="logo">Ianarch</a></h1>
+                
 
                 <!-- Nav -->
                 <?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
-        </header>
+       
 
         <!-- Banner -->
         <div id="banner">
-            <table id="tableBalises2">
+            <table id="liststud">
                 <thead>
                 <tr>
                     <th>Matricule</th>
@@ -42,7 +36,7 @@
 						<?php $tabexercise=Db::getInstance()->select_exercise($tablevel[$k]->level());?>
 						<?php if(count($tabexercise)>1) { ?>
 						<?php $tab_answer_stud=Db::getInstance()->select_all_answer_student($tabstudents[$i]->matricule());?>
-						<td><span class="html"><progress id="progress" value="<?php echo (count($tab_answer_stud)/count($tabexercise))*100;?>" max="<?php echo 100 ?>"></progress><?php echo round((count($tab_answer_stud)/count($tabexercise))*100,1)."%"?></span>
+						<td><span class="html"><progress id="progress" value="<?php echo (count($tab_answer_stud)/count($tabexercise))*100;?>" max="<?php echo 100 ?>"></progress>  <?php echo round((count($tab_answer_stud)/count($tabexercise))*100,1)."%"?></span>
 						<?php }} ?>
                     </tr>
                 <?php }?>

@@ -1,24 +1,17 @@
-<title>Signin IAnArch</title>
 
-<head>
-<body class="homepage">
 
 	<!-- Header -->
-	<div id="header-wrapper">
+	<div id="body_wrapper">
 		<div class="container">
 
 			<!-- Header -->
-			<header id="header">
+			
 				<div class="inner">
 
-					<!-- Logo -->
-					<h1>
-						<a href="index.php" id="logo">Ianarch</a>
-					</h1>
-
+					
                 <?php require_once(PATH_VIEWS.'headerteachers.php'); ?>
             </div>
-			</header>
+			
 
 			<!-- Banner -->
 			<div id="banner">
@@ -70,4 +63,3 @@
 
 		</div>
 	</div>
-</head>

@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS sitephp.exercises(
 	number				INTEGER			AUTO_INCREMENT PRIMARY KEY,
 	theme				VARCHAR(60)		NULL,
 	statement			VARCHAR(400)	NOT NULL,
-	query				VARCHAR(100)	NOT NULL,
+	query				VARCHAR(1000)	NOT NULL,
 	nb_lines			VARCHAR(40)			NOT NULL,
 	last_modification	DATETIME		NULL,
 	num_exercise		INTEGER			NOT NULL,

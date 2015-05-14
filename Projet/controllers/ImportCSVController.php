@@ -22,7 +22,7 @@ class ImportCSVController{
 
      $notification= '';
 
-    $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '210993');#
+    $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');#
 
 
     if(!empty($_FILES['CSVfile'])){

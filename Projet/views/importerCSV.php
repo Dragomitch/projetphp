@@ -1,9 +1,10 @@
-<link rel="stylesheet" href="css/modele01.css" />
 
+<div id="body_wrapper">
+<div id="container">
 <!-- Nav -->
 <?php require_once(PATH_VIEWS.'headerteachers.php'); ?> <!--// TODO mettre ca dans l'index en fonction du type de personne-->
 
-<div class="wrapper">
+
 	<h2>Upload CSV</h2>
     
     <p>Cette secion va vous permettre d'importer des fichiers CSV dans votre DB.<br>
@@ -26,5 +27,5 @@
 	<input type="submit" value="Upload file"><br>
 	</form>
     <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; }?></p>
-
+</div>
 </div>

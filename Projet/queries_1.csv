@@ -2,7 +2,7 @@
 1;;Ecrivez une requête SQL qui permette d'afficher tout le contenu de votre table. ;SELECT * FROM bd1.albums;44
 2;;Donnez, pour chaque album, son isbn, son titre, son scénariste, son dessinateur ainsi que son année d'édition.;SELECT isbn, titre, scenariste, dessinateur, annee_edition FROM bd1.albums;44
 3;;Quelles sont les albums édités par "Dupuis" ?;SELECT * FROM bd1.albums WHERE editeur = 'Dupuis';9
-4;;Quels sont les titres des albums dont le scénariste est "Goscinny"?;SELECT DISTINCT titre FROM bd1.albums WHERE scenariste = ‘Goscinny’;10
+4;;Quels sont les titres des albums dont le scénariste est "Goscinny"?;SELECT DISTINCT titre FROM bd1.albums WHERE scenariste = 'Goscinny';10
 5;;Quels sont les titres et les éditeurs des albums dont un des auteurs (scénariste, dessinateur ou coloriste) s'appelle "Uderzo"?;SELECT DISTINCT titre, editeur FROM bd1.albums WHERE scenariste = 'Uderzo' OR dessinateur = 'Uderzo' OR coloriste = 'Uderzo' ;8
 6;;Quelles sont les albums pour lesquels le coloriste n'a pas été spécifié?;SELECT * FROM bd1.albums  WHERE coloriste IS NULL ;31
 7;;Quels sont les éditeurs qui ont édité des albums en 1978 ?;SELECT DISTINCT editeur FROM bd1.albums WHERE annee_edition = 1978;1

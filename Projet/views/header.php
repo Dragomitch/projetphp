@@ -11,8 +11,8 @@
 <link rel="stylesheet"  type="text/css" href="views/css/style.css" />
 <link rel="stylesheet"  type="text/css" href="views/css/modele01.css" />
 	</head>
-<img alt="backgroundImg" src="views/css/image/banniere.JPG">
+<!-- <img alt="backgroundImg" src="views/css/image/banniere.JPG"> -->
 
-<body>
+<h1>IANARCH - SQL</h1>
 
 						

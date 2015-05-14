@@ -1,32 +1,10 @@
-<title>Signin IAnArch</title>
-
-<head>
-<body class="homepage">
 
 	<!-- Header -->
-	<div id="header-wrapper">
+	<div id="body_wrapper">
 		<div class="container">
 
 			<!-- Header -->
-			<header id="header">
-				<div class="inner">
-                    <meta charset="utf-8">
-
-
-					<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li>IAnArch</li>
-							<li class="current_page_item"><a
-								href="index.php?action=homeStudent">Home</a></li>
-							<li><a href="index.php?action=level">Niveau</a></li>
-							<li><a href="index.php?action=studentStat">Profil</a></li>
-							<li><a href="index.php?action=logout">Deconnexion</a></li>
-						</ul>
-					</nav>
-
-				</div>
-			</header>
+			<?php require_once(PATH_VIEWS.'headerstudent.php'); ?>	
 
 			<h2>Bienvenue <?php echo $name_student[0]->last_name().' '.$name_student[0]->first_name();?></h2>
 
@@ -64,7 +42,7 @@
 			<div id="contenu">
 
 				<h2>
-					<span class="html">Niveau <?php echo $num_level[0]->num_level(); ?></span>
+					<br><span class="html">Niveau <?php echo $num_level[0]->num_level(); ?></span>
 				</h2>
 				<h2>
 					<span class="html">Question <?php echo $tabexercises[$i]->num_exercise(); ?></span>
@@ -73,8 +51,16 @@
 				<p>
 					<span class="html"><?php echo $tabexercises[$i]->statement(); ?></span>
 				</p>
-
-
+				
+			<?php if(empty($last_answer)){?>
+				<p>
+					<span class="html"><?php echo $notification_last_answer;?> </span>
+				</p>
+				<?php }else{?>	
+				<p>
+					<span class="html">Votre reponse : <?php echo $last_answer[0]->answer_query();?> </span>
+				</p>
+				<?php } ?>
 				<!-- 				<a id="niveau" href="images/niveau1.jpg"><img -->
 				<!-- 					src="images/tn_niveau1.jpg" alt="DSD niveau1" -->
 				<!-- 					title="Cliquez pour agrandir" /></a> -->
@@ -178,4 +164,3 @@
         <?php }?>
     </div>
 
-		</head>
