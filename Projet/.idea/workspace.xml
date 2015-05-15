@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abb7ed8-8fda-46eb-a31a-f85e5a4ce72f" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\Projet.iml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\deployment.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\sqldialects.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\.idea\workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projet.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
-    <ignored path=".idea/" />
+    <ignored path="Projet/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,63 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Db.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Db.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.346153" vertical-offset="2707" max-vertical-offset="6001">
-              <caret line="198" column="27" selection-start-line="198" selection-start-column="27" selection-end-line="198" selection-end-column="27" />
-              <folding>
-                <marker date="1431683565286" expanded="true" signature="788:880" placeholder="INSERT INTO ..." />
-                <marker date="1431683565286" expanded="true" signature="1199:1299" placeholder="INSERT INTO ..." />
-                <marker date="1431683565286" expanded="true" signature="1801:1838" placeholder="SELECT level..levels..." />
-                <marker date="1431683565286" expanded="true" signature="2000:2187" placeholder="INSERT INTO ..." />
-                <marker date="1431683565286" expanded="true" signature="2685:2716" placeholder="DELETE FROM ..." />
-                <marker date="1431683565286" expanded="true" signature="2885:2997" placeholder="INSERT INTO ..." />
-                <marker date="1431683565286" expanded="true" signature="3129:3211" placeholder="SELECT * fro..teachers..." />
-                <marker date="1431683565286" expanded="true" signature="3531:3617" placeholder="SELECT * fro..students..." />
-                <marker date="1431683565286" expanded="true" signature="3938:4077" placeholder="UPDATE stude..." />
-                <marker date="1431683565286" expanded="true" signature="4491:4513" placeholder="SELECT * FRO..students..." />
-                <marker date="1431683565286" expanded="true" signature="4910:4984" placeholder="SELECT * FRO..." />
-                <marker date="1431683565286" expanded="true" signature="5403:5473" placeholder="SELECT * FRO..exercises..." />
-                <marker date="1431683565286" expanded="true" signature="5931:5951" placeholder="SELECT * FRO..levels..." />
-                <marker date="1431683565286" expanded="true" signature="6316:6349" placeholder="SELECT * FRO..levels..." />
-                <marker date="1431683565286" expanded="true" signature="6767:6908" placeholder="SELECT * FRO..." />
-                <marker date="1431683565286" expanded="true" signature="7317:7523" placeholder="INSERT INTO ..." />
-                <marker date="1431683565286" expanded="true" signature="7832:7966" placeholder="SELECT * FRO..." />
-                <marker date="1431683565286" expanded="true" signature="8386:8532" placeholder="SELECT * FRO..students_answers..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateDATABASE-And-CreateTABLES.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="19907">
-              <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirstLoginController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.923077" vertical-offset="62" max-vertical-offset="680">
-              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Students_answers.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Students_answers.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94498384" vertical-offset="28" max-vertical-offset="714">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.5048544" vertical-offset="28" max-vertical-offset="714">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -325,6 +262,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -352,7 +303,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -400,17 +351,20 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
       <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="41dcfaad-2a0d-4315-8b74-698c295d2f9f" server_name="projetPHP">
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -420,9 +374,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="41dcfaad-2a0d-4315-8b74-698c295d2f9f" server_name="projetPHP">
       <method />
     </configuration>
     <configuration default="false" name="ImporterCSVController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/controllers/ImporterCSVController.php">
@@ -541,7 +492,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431690662901</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="_Site fonctionnel, mis en page, sans dates. Supression des fichiers propres aux IDE, 2 eme essai">
+      <created>1431691175372</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1431691175372</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -571,23 +528,23 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30927834" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6484536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31986898" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17305644" sideWeight="0.4994965" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17465389" sideWeight="0.4994965" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18125" sideWeight="0.50050354" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -619,36 +576,45 @@
     <MESSAGE value="_Site fonctionnel, mis en page, sans dates, première version remise sur e-campus." />
     <MESSAGE value="_Site fonctionnel, mis en page, sans dates. Supression des fichiers propres aux IDE" />
     <MESSAGE value="_Site fonctionnel, mis en page, sans dates. Supression des fichiers propres aux IDE, 2 eme essai" />
-    <option name="LAST_COMMIT_MESSAGE" value="_Site fonctionnel, mis en page, sans dates. Supression des fichiers propres aux IDE, 2 eme essai" />
+    <MESSAGE value="_Site fonctionnel, mis en page, sans dates. Supression des fichiers propres aux IDE, 3 eme essai" />
+    <option name="LAST_COMMIT_MESSAGE" value="_Site fonctionnel, mis en page, sans dates. Supression des fichiers propres aux IDE, 3 eme essai" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="680">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Db.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2707" max-vertical-offset="6001">
           <caret line="198" column="27" selection-start-line="198" selection-start-column="27" selection-end-line="198" selection-end-column="27" />
           <folding>
-            <marker date="1431683565286" expanded="true" signature="788:880" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="1199:1299" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="1801:1838" placeholder="SELECT level..levels..." />
-            <marker date="1431683565286" expanded="true" signature="2000:2187" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="2685:2716" placeholder="DELETE FROM ..." />
-            <marker date="1431683565286" expanded="true" signature="2885:2997" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="3129:3211" placeholder="SELECT * fro..teachers..." />
-            <marker date="1431683565286" expanded="true" signature="3531:3617" placeholder="SELECT * fro..students..." />
-            <marker date="1431683565286" expanded="true" signature="3938:4077" placeholder="UPDATE stude..." />
-            <marker date="1431683565286" expanded="true" signature="4491:4513" placeholder="SELECT * FRO..students..." />
-            <marker date="1431683565286" expanded="true" signature="4910:4984" placeholder="SELECT * FRO..." />
-            <marker date="1431683565286" expanded="true" signature="5403:5473" placeholder="SELECT * FRO..exercises..." />
-            <marker date="1431683565286" expanded="true" signature="5931:5951" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431683565286" expanded="true" signature="6316:6349" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431683565286" expanded="true" signature="6767:6908" placeholder="SELECT * FRO..." />
-            <marker date="1431683565286" expanded="true" signature="7317:7523" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="7832:7966" placeholder="SELECT * FRO..." />
-            <marker date="1431683565286" expanded="true" signature="8386:8532" placeholder="SELECT * FRO..students_answers..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT level..levels..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * fro..teachers..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * fro..students..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="UPDATE stude..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..students..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..exercises..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..students_answers..." />
           </folding>
         </state>
       </provider>
@@ -702,26 +668,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/fd5ba4f5/c7be3a5e-2a81-413e-917f-81f0cff1072f/sitephp..teachers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/fd5ba4f5/c7be3a5e-2a81-413e-917f-81f0cff1072f/sitephp..exercises">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -736,14 +702,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/fd5ba4f5/c7be3a5e-2a81-413e-917f-81f0cff1072f/sitephp..levels">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -940,13 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/export.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2037037" vertical-offset="0" max-vertical-offset="918">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
@@ -975,33 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.346153" vertical-offset="2707" max-vertical-offset="6001">
-          <caret line="198" column="27" selection-start-line="198" selection-start-column="27" selection-end-line="198" selection-end-column="27" />
-          <folding>
-            <marker date="1431683565286" expanded="true" signature="788:880" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="1199:1299" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="1801:1838" placeholder="SELECT level..levels..." />
-            <marker date="1431683565286" expanded="true" signature="2000:2187" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="2685:2716" placeholder="DELETE FROM ..." />
-            <marker date="1431683565286" expanded="true" signature="2885:2997" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="3129:3211" placeholder="SELECT * fro..teachers..." />
-            <marker date="1431683565286" expanded="true" signature="3531:3617" placeholder="SELECT * fro..students..." />
-            <marker date="1431683565286" expanded="true" signature="3938:4077" placeholder="UPDATE stude..." />
-            <marker date="1431683565286" expanded="true" signature="4491:4513" placeholder="SELECT * FRO..students..." />
-            <marker date="1431683565286" expanded="true" signature="4910:4984" placeholder="SELECT * FRO..." />
-            <marker date="1431683565286" expanded="true" signature="5403:5473" placeholder="SELECT * FRO..exercises..." />
-            <marker date="1431683565286" expanded="true" signature="5931:5951" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431683565286" expanded="true" signature="6316:6349" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431683565286" expanded="true" signature="6767:6908" placeholder="SELECT * FRO..." />
-            <marker date="1431683565286" expanded="true" signature="7317:7523" placeholder="INSERT INTO ..." />
-            <marker date="1431683565286" expanded="true" signature="7832:7966" placeholder="SELECT * FRO..." />
-            <marker date="1431683565286" expanded="true" signature="8386:8532" placeholder="SELECT * FRO..students_answers..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.4074075" vertical-offset="0" max-vertical-offset="2533">
@@ -1016,6 +948,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/export.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49891305" vertical-offset="0" max-vertical-offset="920">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5173913" vertical-offset="0" max-vertical-offset="920">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1027,18 +975,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
+    <entry file="file://$PROJECT_DIR$/models/Db.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.923077" vertical-offset="62" max-vertical-offset="680">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-          <folding />
+        <state vertical-scroll-proportion="0.72657114" vertical-offset="2707" max-vertical-offset="6001">
+          <caret line="198" column="27" selection-start-line="198" selection-start-column="27" selection-end-line="198" selection-end-column="27" />
+          <folding>
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT level..levels..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * fro..teachers..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * fro..students..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="UPDATE stude..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..students..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..exercises..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1431683565286" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..students_answers..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Students_answers.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94498384" vertical-offset="28" max-vertical-offset="714">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5048544" vertical-offset="28" max-vertical-offset="714">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
