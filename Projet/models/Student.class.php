@@ -12,6 +12,7 @@ class Student{
 		$this->_first_name = $first_name;
 		$this->_last_name =$last_name;
 		$this->_password = $password;
+		#$this->_last_connexion = $time_start;
 	}
 	
 	public function matricule(){
@@ -28,6 +29,8 @@ class Student{
 	public function password(){
 		return $this->_password;
 	}
- 	
+// 	public function last_connexion(){
+// 		return $this->_last_connexion;
+// 	}
 }
 ?>

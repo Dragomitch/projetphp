@@ -10,6 +10,7 @@ class LevelController{
             header ( "Location: index.php?action=homeTeacher" ); // redirection HTTP vers l'action login
             die ();
         }
+        #select all the levels
         $tablevel=Db::getInstance()->select_level();
         #call the view
         require_once (PATH_VIEWS .'level.php');

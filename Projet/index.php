@@ -94,9 +94,9 @@ switch($action) {
         require_once('controllers/LogoutController.php');
         $controller = new LogoutController();
         break;
-    case 'ExportCSV':
-        require_once('controllers/ExporterCSVController.php');
-        $controller = new ExporterCSVController();
+    case 'exportCSV':
+        require_once('controllers/ExportCSVController.php');
+        $controller = new ExportCSVController();
         break;
     case 'login':
         require_once('controllers/LoginController.php');
@@ -118,19 +118,14 @@ switch($action) {
         require_once('controllers/ImportCSVController.php');
         $controller = new ImportCSVController();
         break;
-    case 'uploadCSV':
-        require_once('controllers/UploadCVSController.php');
-        $controller= new UploadCSVController();
-        break;
     case 'studentList':
         require_once('controllers/StudentListController.php');
         $controller = new StudentListController();
         break;
     case 'modifExercice':
-        require_once('controllers/modifExerciseController.php');
-        $controller = new modifExerciseController();
+        require_once('controllers/ModifyExerciseController.php');
+        $controller = new ModifyExerciseController();
         break;
-    
     case 'studentEx':
     	require_once ('controllers/ShowStudentExController.php');
     	$controller = new ShowStudentExController();

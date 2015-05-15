@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8abb7ed8-8fda-46eb-a31a-f85e5a4ce72f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Db.class.php" afterPath="$PROJECT_DIR$/models/Db.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ImportCSVController.php" afterPath="$PROJECT_DIR$/controllers/ImportCSVController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/footer.php" afterPath="$PROJECT_DIR$/views/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/headerteachers.php" afterPath="$PROJECT_DIR$/views/headerteachers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/importCSV.php" afterPath="$PROJECT_DIR$/views/importCSV.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.php" afterPath="$PROJECT_DIR$/views/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/css/modele01.css" afterPath="$PROJECT_DIR$/views/css/modele01.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/studentlist.php" afterPath="$PROJECT_DIR$/views/studentlist.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projet.iws" />
@@ -55,6 +63,24 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="levels" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - sitephp@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="sitephp" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="exercises" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -69,36 +95,116 @@
       <file leaf-file-name="Db.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Db.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="4675">
-              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state vertical-scroll-proportion="-7.8461537" vertical-offset="1751" max-vertical-offset="4981">
+              <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
-                <marker date="1431596299950" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="1855:1892" placeholder="SELECT level..levels..." />
-                <marker date="1431596299950" expanded="true" signature="2054:2241" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="2921:3033" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="3354:3432" placeholder="SELECT * fro..teachers..." />
-                <marker date="1431596299950" expanded="true" signature="3698:3784" placeholder="SELECT * fro..students..." />
-                <marker date="1431596299950" expanded="true" signature="4050:4189" placeholder="UPDATE stude..." />
-                <marker date="1431596299950" expanded="true" signature="4602:4624" placeholder="SELECT * FRO..students..." />
-                <marker date="1431596299950" expanded="true" signature="4948:5022" placeholder="SELECT * FRO..." />
-                <marker date="1431596299950" expanded="true" signature="5365:5435" placeholder="SELECT * FRO..exercises..." />
-                <marker date="1431596299950" expanded="true" signature="5817:5837" placeholder="SELECT * FRO..levels..." />
-                <marker date="1431596299950" expanded="true" signature="6126:6159" placeholder="SELECT * FRO..levels..." />
-                <marker date="1431596299950" expanded="true" signature="6504:6645" placeholder="SELECT * FRO..." />
-                <marker date="1431596299950" expanded="true" signature="7019:7225" placeholder="INSERT INTO ..." />
-                <marker date="1431596299950" expanded="true" signature="7520:7654" placeholder="SELECT * FRO..." />
-                <marker date="1431596299950" expanded="true" signature="8079:8162" placeholder="SELECT * FRO..." />
+                <marker date="1431635719373" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
+                <marker date="1431635719373" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
+                <marker date="1431635719373" expanded="true" signature="1856:1893" placeholder="SELECT level..levels..." />
+                <marker date="1431635719373" expanded="true" signature="2055:2242" placeholder="INSERT INTO ..." />
+                <marker date="1431635719373" expanded="true" signature="2871:2983" placeholder="INSERT INTO ..." />
+                <marker date="1431635719373" expanded="true" signature="3304:3382" placeholder="SELECT * fro..teachers..." />
+                <marker date="1431635719373" expanded="true" signature="3693:3779" placeholder="SELECT * fro..students..." />
+                <marker date="1431635719373" expanded="true" signature="4096:4235" placeholder="UPDATE stude..." />
+                <marker date="1431635719373" expanded="true" signature="4645:4667" placeholder="SELECT * FRO..students..." />
+                <marker date="1431635719373" expanded="true" signature="5060:5134" placeholder="SELECT * FRO..." />
+                <marker date="1431635719373" expanded="true" signature="5549:5619" placeholder="SELECT * FRO..exercises..." />
+                <marker date="1431635719373" expanded="true" signature="6073:6093" placeholder="SELECT * FRO..levels..." />
+                <marker date="1431635719373" expanded="true" signature="6454:6487" placeholder="SELECT * FRO..levels..." />
+                <marker date="1431635719373" expanded="true" signature="6902:7043" placeholder="SELECT * FRO..." />
+                <marker date="1431635719373" expanded="true" signature="7448:7654" placeholder="INSERT INTO ..." />
+                <marker date="1431635719373" expanded="true" signature="7958:8092" placeholder="SELECT * FRO..." />
+                <marker date="1431635719373" expanded="true" signature="8535:8681" placeholder="SELECT * FRO..students_answers..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="importerCSV.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/importerCSV.php">
+      <file leaf-file-name="headerteachers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/headerteachers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="918">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="289">
+              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="374">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="221">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modele01.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/css/modele01.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="3077">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="headerstudents.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/headerstudents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="374">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studentlist.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/studentlist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5447514" vertical-offset="0" max-vertical-offset="905">
+              <caret line="29" column="101" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="importCSV.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/importCSV.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="629">
+              <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstLoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.884615" vertical-offset="106" max-vertical-offset="731">
+              <caret line="29" column="139" selection-start-line="29" selection-start-column="139" selection-end-line="29" selection-end-column="139" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportCSVController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.192307" vertical-offset="600" max-vertical-offset="2159">
+              <caret line="57" column="101" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -110,6 +216,12 @@
     <option name="myUpdateMethod" value="REBASE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Dragomitch" />
+      </list>
+    </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -118,48 +230,64 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$/.." source="partiePhilippe" target-remote="origin" target-branch="master" />
       <push-target-info repo="$PROJECT_DIR$/.." source="partieRomain" target-remote="origin" target-branch="master" />
+      <push-target-info repo="$PROJECT_DIR$/.." source="partiePhilippe" target-remote="origin" target-branch="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/uploadCSV.php" />
-        <option value="$PROJECT_DIR$/controllers/UploadCVSController.php" />
-        <option value="$PROJECT_DIR$/views/uploadCSV.php" />
-        <option value="$PROJECT_DIR$/controllers/ImporterCSVController.php" />
-        <option value="$PROJECT_DIR$/controllers/AcceuilProfController.php" />
+        <option value="$PROJECT_DIR$/models/Exercises.class.php" />
+        <option value="$PROJECT_DIR$/models/students_answers.class.php" />
+        <option value="$PROJECT_DIR$/views/exporterCSV.php" />
+        <option value="$PROJECT_DIR$/views/modifexercice.php" />
+        <option value="$PROJECT_DIR$/views/exercices.php" />
+        <option value="$PROJECT_DIR$/models/Levels.class.php" />
         <option value="$PROJECT_DIR$/controllers/ModifExerciceController.php" />
+        <option value="$PROJECT_DIR$/CSV/queries_1.csv" />
+        <option value="$PROJECT_DIR$/controllers/ListeEtudiantController.php" />
+        <option value="$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql" />
         <option value="$PROJECT_DIR$/controllers/ExporterCSVController.php" />
-        <option value="$PROJECT_DIR$/controllers/ExercicesController.php" />
-        <option value="$PROJECT_DIR$/controllers/DeconnexionController.php" />
+        <option value="$PROJECT_DIR$/controllers/AcceuilProfController.php" />
         <option value="$PROJECT_DIR$/controllers/AcceuilEleveController.php" />
         <option value="$PROJECT_DIR$/controllers/LoginController.php" />
-        <option value="$PROJECT_DIR$/controllers/HomeTeacherController.php" />
-        <option value="$PROJECT_DIR$/views/login.php" />
-        <option value="$PROJECT_DIR$/views/firstlogin.php" />
-        <option value="$PROJECT_DIR$/controllers/ListeEtudiantController.php" />
-        <option value="$PROJECT_DIR$/controllers/FirstLoginController.php" />
-        <option value="$PROJECT_DIR$/models/Exercises.class.php" />
-        <option value="$PROJECT_DIR$/controllers/ExercisesController.php" />
         <option value="$PROJECT_DIR$/controllers/LevelController.php" />
-        <option value="$PROJECT_DIR$/models/students_answers.class.php" />
-        <option value="$PROJECT_DIR$/views/acceuileleve.php" />
-        <option value="$PROJECT_DIR$/views/acceuilprof.php" />
-        <option value="$PROJECT_DIR$/views/exporterCSV.php" />
-        <option value="$PROJECT_DIR$/views/headerteachers.php" />
-        <option value="$PROJECT_DIR$/views/level.php" />
+        <option value="$PROJECT_DIR$/controllers/HomeTeacherController.php" />
+        <option value="$PROJECT_DIR$/controllers/HomeStudentController.php" />
+        <option value="$PROJECT_DIR$/controllers/FirstLoginController.php" />
+        <option value="$PROJECT_DIR$/controllers/ExercisesController.php" />
+        <option value="$PROJECT_DIR$/Projet/controllers/ModifExerciceController.php" />
+        <option value="$PROJECT_DIR$/views/modifyexercise.php" />
         <option value="$PROJECT_DIR$/views/listeetudiant.php" />
-        <option value="$PROJECT_DIR$/views/modifexercice.php" />
-        <option value="$PROJECT_DIR$/views/statetudiant.php" />
-        <option value="$PROJECT_DIR$/views/header.php" />
-        <option value="$PROJECT_DIR$/views/exercices.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/controllers/ImportCSVController.php" />
-        <option value="$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql" />
-        <option value="$PROJECT_DIR$/models/Db.class.php" />
         <option value="$PROJECT_DIR$/views/importerCSV.php" />
+        <option value="$PROJECT_DIR$/views/hometeacher.php" />
+        <option value="$PROJECT_DIR$/views/headerstudents.php" />
+        <option value="$PROJECT_DIR$/views/header.php" />
+        <option value="$PROJECT_DIR$/views/firstlogin.php" />
+        <option value="$PROJECT_DIR$/views/acceuilprof.php" />
+        <option value="$PROJECT_DIR$/views/acceuileleve.php" />
+        <option value="$PROJECT_DIR$/views/homestudent.php" />
+        <option value="$PROJECT_DIR$/views/level.php" />
+        <option value="$PROJECT_DIR$/controllers/LogoutController.php" />
+        <option value="$PROJECT_DIR$/views/exercise.php" />
+        <option value="$PROJECT_DIR$/controllers/ModifyExerciceController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controllers/ExportCSVController.php" />
+        <option value="$PROJECT_DIR$/views/statetudiant.php" />
+        <option value="$PROJECT_DIR$/views/export.php" />
+        <option value="$PROJECT_DIR$/controllers/ModifyExerciseController.php" />
+        <option value="$PROJECT_DIR$/controllers/StudentListController.php" />
+        <option value="$PROJECT_DIR$/controllers/ShowStudentExController.php" />
+        <option value="$PROJECT_DIR$/views/showstudentex.php" />
+        <option value="$PROJECT_DIR$/views/css/style.css" />
+        <option value="$PROJECT_DIR$/views/login.php" />
+        <option value="$PROJECT_DIR$/views/footer.php" />
+        <option value="$PROJECT_DIR$/views/css/modele01.css" />
+        <option value="$PROJECT_DIR$/views/headerteachers.php" />
+        <option value="$PROJECT_DIR$/controllers/ImportCSVController.php" />
+        <option value="$PROJECT_DIR$/models/Db.class.php" />
+        <option value="$PROJECT_DIR$/views/importCSV.php" />
+        <option value="$PROJECT_DIR$/views/studentlist.php" />
       </list>
     </option>
   </component>
@@ -374,7 +502,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\views\css\image" />
       <recent name="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\CreateTable" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Programmes( A check)\Nouveaux Programmes\wamp\www\projetphp\projetphp\Projet\views\css" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.login.php">
@@ -390,20 +522,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="41dcfaad-2a0d-4315-8b74-698c295d2f9f" server_name="projetPHP">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -413,6 +542,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="41dcfaad-2a0d-4315-8b74-698c295d2f9f" server_name="projetPHP">
       <method />
     </configuration>
     <configuration default="false" name="ImporterCSVController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/controllers/ImporterCSVController.php">
@@ -489,7 +621,31 @@
       <option name="project" value="LOCAL" />
       <updated>1431596571497</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="_Correction de l'importation des etudiants: retrait des doubles-quotes (&quot;) des donnees&#10;_Correction de l'encodage des queries et de leur affichage">
+      <created>1431596696294</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1431596696294</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'partieRomain' into partiePhilippe&#10;&#10;Conflicts:&#10;&#9;Projet/CSV/queries_1.csv&#10;&#9;Projet/CreateTable/CreateDATABASE-And-CreateTABLES.sql&#10;&#9;Projet/controllers/ImportCSVController.php&#10;&#9;Projet/etudiants.csv&#10;&#9;Projet/models/Db.class.php&#10;&#9;Projet/models/Levels.class.php&#10;&#9;Projet/professeurs.csv&#10;&#9;Projet/views/importerCSV.php&#10;">
+      <created>1431604631479</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1431604631479</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'partieRomain' into partiePhilippe&#10;&#10;Conflicts:&#10;&#9;Projet/CSV/queries_1.csv&#10;&#9;Projet/CreateTable/CreateDATABASE-And-CreateTABLES.sql&#10;&#9;Projet/controllers/ImportCSVController.php&#10;&#9;Projet/etudiants.csv&#10;&#9;Projet/models/Db.class.php&#10;&#9;Projet/models/Levels.class.php&#10;&#9;Projet/professeurs.csv&#10;&#9;Projet/views/importerCSV.php&#10;">
+      <created>1431605312770</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1431605312770</updated>
+    </task>
+    <task id="LOCAL-00012" summary="_Toutes les fonctionnalites sont faites, debut de l'amelioration du code.">
+      <created>1431634685665</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1431634685665</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -516,24 +672,24 @@
     <frame x="-4" y="0" width="1928" height="1088" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886598" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886598" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3216495" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886598" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18125" sideWeight="0.50050354" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886598" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886598" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16719915" sideWeight="0.4994965" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18125" sideWeight="0.50050354" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1687966" sideWeight="0.4994965" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997986" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -561,48 +717,15 @@
     <MESSAGE value="_Petite coquille dans insertQuery modifie" />
     <MESSAGE value="_Version fusionnée entre partiePhilippe(d7b84f78f1d9ff3339cd1e5e3907674e486408b9) et partieRomain (4f897dc70e99adb35c70ddb07bbf2144e0324399)" />
     <MESSAGE value="_Correction de l'importation des etudiants: retrait des doubles-quotes (&quot;) des donnees&#10;_Correction de l'encodage des queries et de leur affichage" />
-    <option name="LAST_COMMIT_MESSAGE" value="_Correction de l'importation des etudiants: retrait des doubles-quotes (&quot;) des donnees&#10;_Correction de l'encodage des queries et de leur affichage" />
+    <MESSAGE value="Merge branch 'partieRomain' into partiePhilippe&#10;&#10;Conflicts:&#10;&#9;Projet/CSV/queries_1.csv&#10;&#9;Projet/CreateTable/CreateDATABASE-And-CreateTABLES.sql&#10;&#9;Projet/controllers/ImportCSVController.php&#10;&#9;Projet/etudiants.csv&#10;&#9;Projet/models/Db.class.php&#10;&#9;Projet/models/Levels.class.php&#10;&#9;Projet/professeurs.csv&#10;&#9;Projet/views/importerCSV.php&#10;" />
+    <MESSAGE value="_Toutes les fonctionnalites sont faites, debut de l'amelioration du code." />
+    <option name="LAST_COMMIT_MESSAGE" value="_Toutes les fonctionnalites sont faites, debut de l'amelioration du code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/importerCSV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="340">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/headerteachers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DeconnexionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="442">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="1037">
-          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1037">
@@ -629,27 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3516949" vertical-offset="399" max-vertical-offset="2414">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/modele01.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22563559" vertical-offset="1079" max-vertical-offset="2992">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/signin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30614406" vertical-offset="0" max-vertical-offset="944">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Teachers.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="629">
@@ -657,73 +759,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ExporterCSVController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40652174" vertical-offset="0" max-vertical-offset="920">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/AcceuilEleveController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3880435" vertical-offset="0" max-vertical-offset="920">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326087" vertical-offset="0" max-vertical-offset="969">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/HomeTeacherController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22173913" vertical-offset="0" max-vertical-offset="920">
-          <caret line="12" column="104" selection-start-line="12" selection-start-column="104" selection-end-line="12" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/firstlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018518519" vertical-offset="0" max-vertical-offset="918">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ListeEtudiantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42592594" vertical-offset="0" max-vertical-offset="918">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Student.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="918">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018518519" vertical-offset="0" max-vertical-offset="918">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="918">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -739,38 +778,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/Students_answers.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="544">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSV/queries_1.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4285715" vertical-offset="0" max-vertical-offset="714">
+          <caret line="4" column="138" selection-start-line="4" selection-start-column="138" selection-end-line="4" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etudiants.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64830506" vertical-offset="0" max-vertical-offset="3281">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Levels.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2037037" vertical-offset="0" max-vertical-offset="918">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.35185185" vertical-offset="0" max-vertical-offset="918">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/AcceuilProfController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="944">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DeconnexionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37037036" vertical-offset="0" max-vertical-offset="918">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ModifExerciceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="918">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/StatEtudiantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="944">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-20.035715" vertical-offset="0" max-vertical-offset="19907">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -788,8 +834,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Exercises.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.104575165" vertical-offset="125" max-vertical-offset="1071">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="127" />
+        <state vertical-scroll-proportion="0.50108695" vertical-offset="100" max-vertical-offset="1020">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queries_1.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67624307" vertical-offset="0" max-vertical-offset="905">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -798,189 +863,261 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="374">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/students_answers.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="544">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/acceuileleve.php">
+    <entry file="file://$PROJECT_DIR$/controllers/HomeStudentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="884">
-          <caret line="18" column="91" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/acceuilprof.php">
+    <entry file="file://$PROJECT_DIR$/controllers/HomeTeacherController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="782">
-          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="442">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/exporterCSV.php">
+    <entry file="file://$PROJECT_DIR$/views/modifyexercise.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="731">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ExercisesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5728261" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/exercices.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35108694" vertical-offset="0" max-vertical-offset="3162">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="255" max-vertical-offset="1207">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.092391305" vertical-offset="0" max-vertical-offset="920">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.31413043" vertical-offset="0" max-vertical-offset="920">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/headerteachers.php">
+    <entry file="file://$PROJECT_DIR$/views/firstlogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14782609" vertical-offset="0" max-vertical-offset="920">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state vertical-scroll-proportion="3.104348" vertical-offset="0" max-vertical-offset="2958">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/hometeacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6652174" vertical-offset="0" max-vertical-offset="920">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/homestudent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5728261" vertical-offset="0" max-vertical-offset="920">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/LogoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.018478261" vertical-offset="0" max-vertical-offset="920">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ExportCSVController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70434785" vertical-offset="202" max-vertical-offset="1122">
+          <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/level.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6467391" vertical-offset="0" max-vertical-offset="920">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.110869564" vertical-offset="0" max-vertical-offset="920">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/listeetudiant.php">
+    <entry file="file://$PROJECT_DIR$/views/export.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6063947" vertical-offset="96" max-vertical-offset="1003">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="612">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/modifexercice.php">
+    <entry file="file://$PROJECT_DIR$/controllers/ExercisesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2423913" vertical-offset="406" max-vertical-offset="1326">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        <state vertical-scroll-proportion="3.2692308" vertical-offset="578" max-vertical-offset="1819">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/statetudiant.php">
+    <entry file="file://$PROJECT_DIR$/views/exercise.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46195653" vertical-offset="0" max-vertical-offset="920">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="2958">
+          <caret line="26" column="88" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CreateTable/CreateDATABASE-And-CreateTABLES.sql">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/controllers/ShowStudentExController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851852" vertical-offset="0" max-vertical-offset="19924">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="561">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
+    <entry file="file://$PROJECT_DIR$/views/showstudentex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6815217" vertical-offset="1052" max-vertical-offset="2380">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="867">
+          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
+          <folding>
+            <marker date="1431634079448" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431634079448" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431634079448" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1431634079448" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ModifyExerciseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="134" max-vertical-offset="1054">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/StudentListController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="595">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2222" max-vertical-offset="3468">
+          <caret line="157" column="15" selection-start-line="157" selection-start-column="15" selection-end-line="157" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3880435" vertical-offset="357" max-vertical-offset="2244">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        <state vertical-scroll-proportion="-11.192307" vertical-offset="1375" max-vertical-offset="2550">
+          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/professeurs.csv">
+    <entry file="file://$PROJECT_DIR$/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="374">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSV/queries_1.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/views/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05635359" vertical-offset="0" max-vertical-offset="905">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="221">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etudiants.csv">
+    <entry file="file://$PROJECT_DIR$/views/css/modele01.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.053911205" vertical-offset="0" max-vertical-offset="3281">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="3077">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/headerstudents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="374">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/headerteachers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="289">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/FirstLoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.884615" vertical-offset="106" max-vertical-offset="731">
+          <caret line="29" column="139" selection-start-line="29" selection-start-column="139" selection-end-line="29" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ImportCSVController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.192307" vertical-offset="600" max-vertical-offset="2159">
+          <caret line="57" column="101" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Db.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="4675">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="1751" max-vertical-offset="4981">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
-            <marker date="1431596299950" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="1855:1892" placeholder="SELECT level..levels..." />
-            <marker date="1431596299950" expanded="true" signature="2054:2241" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="2921:3033" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="3354:3432" placeholder="SELECT * fro..teachers..." />
-            <marker date="1431596299950" expanded="true" signature="3698:3784" placeholder="SELECT * fro..students..." />
-            <marker date="1431596299950" expanded="true" signature="4050:4189" placeholder="UPDATE stude..." />
-            <marker date="1431596299950" expanded="true" signature="4602:4624" placeholder="SELECT * FRO..students..." />
-            <marker date="1431596299950" expanded="true" signature="4948:5022" placeholder="SELECT * FRO..." />
-            <marker date="1431596299950" expanded="true" signature="5365:5435" placeholder="SELECT * FRO..exercises..." />
-            <marker date="1431596299950" expanded="true" signature="5817:5837" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431596299950" expanded="true" signature="6126:6159" placeholder="SELECT * FRO..levels..." />
-            <marker date="1431596299950" expanded="true" signature="6504:6645" placeholder="SELECT * FRO..." />
-            <marker date="1431596299950" expanded="true" signature="7019:7225" placeholder="INSERT INTO ..." />
-            <marker date="1431596299950" expanded="true" signature="7520:7654" placeholder="SELECT * FRO..." />
-            <marker date="1431596299950" expanded="true" signature="8079:8162" placeholder="SELECT * FRO..." />
+            <marker date="1431635719373" expanded="true" signature="797:889" placeholder="INSERT INTO ..." />
+            <marker date="1431635719373" expanded="true" signature="1209:1309" placeholder="INSERT INTO ..." />
+            <marker date="1431635719373" expanded="true" signature="1856:1893" placeholder="SELECT level..levels..." />
+            <marker date="1431635719373" expanded="true" signature="2055:2242" placeholder="INSERT INTO ..." />
+            <marker date="1431635719373" expanded="true" signature="2871:2983" placeholder="INSERT INTO ..." />
+            <marker date="1431635719373" expanded="true" signature="3304:3382" placeholder="SELECT * fro..teachers..." />
+            <marker date="1431635719373" expanded="true" signature="3693:3779" placeholder="SELECT * fro..students..." />
+            <marker date="1431635719373" expanded="true" signature="4096:4235" placeholder="UPDATE stude..." />
+            <marker date="1431635719373" expanded="true" signature="4645:4667" placeholder="SELECT * FRO..students..." />
+            <marker date="1431635719373" expanded="true" signature="5060:5134" placeholder="SELECT * FRO..." />
+            <marker date="1431635719373" expanded="true" signature="5549:5619" placeholder="SELECT * FRO..exercises..." />
+            <marker date="1431635719373" expanded="true" signature="6073:6093" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431635719373" expanded="true" signature="6454:6487" placeholder="SELECT * FRO..levels..." />
+            <marker date="1431635719373" expanded="true" signature="6902:7043" placeholder="SELECT * FRO..." />
+            <marker date="1431635719373" expanded="true" signature="7448:7654" placeholder="INSERT INTO ..." />
+            <marker date="1431635719373" expanded="true" signature="7958:8092" placeholder="SELECT * FRO..." />
+            <marker date="1431635719373" expanded="true" signature="8535:8681" placeholder="SELECT * FRO..students_answers..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/importerCSV.php">
+    <entry file="file://$PROJECT_DIR$/views/importCSV.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556" vertical-offset="0" max-vertical-offset="918">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="629">
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/studentlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5447514" vertical-offset="0" max-vertical-offset="905">
+          <caret line="29" column="101" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
           <folding />
         </state>
       </provider>

@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS sitephp.exercises(
 
 	FOREIGN KEY fk_author(author)		REFERENCES teachers(login),
 	FOREIGN KEY fk_num_level(num_level)	REFERENCES levels(level)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE
 )ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS sitephp.students_answers(
@@ -50,15 +52,12 @@ CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 
 	FOREIGN KEY fk_exercise(exercise)	REFERENCES exercises(number),
 	FOREIGN KEY fk_student(student)		REFERENCES students(matricule)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE
 
 )ENGINE=InnoDB;
 
--- Changer dans answer_students le Char(100) en VARCHAR(1000)
 -- Vérifier la relation qu'il faut entre students_answer et exercises.(	et donc si number doit également être FK)
--- Un exercice peut être ne pas avoir de niveau attribué ? Obligatoirement
--- Un author peut être NULL dans exercises. Enlever NN et gras.
--- Supprimer la FK  de levels
--- Rajouter un numero d'excercice dans exercises pour pouvoir différencier deux exercices de même niveau qui doit être renseigné ( NN)
 
 CREATE DATABASE IF NOT EXISTS bd1 DEFAULT COLLATE = utf8_general_ci;
 

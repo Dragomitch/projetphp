@@ -1,15 +1,8 @@
 <?php
 class ImportCSVController{
 	public function __construct(){
-		
-	}
-    /**
-    *TODO IL FAUT <---- que les étudiants et les profs soient importés lors du premier lancement de l'application s'il n'y en a pas
-    *Les DB sont censées exister, pas besoin de les importer.
-    *
-    *
-    */
 
+	}
     public function run(){
 
     if ( empty ( $_SESSION ['authentifie'] ) ){
@@ -22,11 +15,8 @@ class ImportCSVController{
 
      $notification= '';
 
-    $this->_db = new PDO('mysql:host=localhost;dbname=sitephp', 'root', '');#
-
-
     if(!empty($_FILES['CSVfile'])){
-        if( $_FILES['CSVfile']['tmp_name'] !=  ''){//TODO rajouter notifications
+        if( $_FILES['CSVfile']['tmp_name'] !=  ''){
             $file= file($_FILES['CSVfile']['tmp_name']);
             if(preg_match('/"Matric Info";"Nom Etudiant";"Prénom Etudiant"/',$file[0])){
                 foreach($file as $index => $studentData){
@@ -35,14 +25,17 @@ class ImportCSVController{
                         Db::getInstance()->insertStudent($valuesTable);
                     }
                 }
+                $notification= "L'importation des étudiants s'est bien déroulée";
 
-            }elseif(preg_match('/login;nom;prenom/',$file[0])){ //TODO rajouter notifications
+            }elseif(preg_match('/login;nom;prenom/',$file[0])){
                 foreach($file as $index => $teacherData){
                     if($index> 0){
                         $valuesTable= explode(';', $teacherData);
                         Db::getInstance()->insertTeacher($valuesTable);
                     }
                 }
+                $notification= "L'importation des professeurs s'est bien déroulée";
+
             }elseif (preg_match('/num;theme;enonce;query;nb/', $file[0])) {
                 if(empty($_POST['level_label']) | empty($_POST['level_num'])){
                     $notification= "Veuillez entrer un numero de niveau valide afin d'importer des exercices";
@@ -96,10 +89,6 @@ class ImportCSVController{
 
     }
 
-    public function testCSValide($fileName){
-        //TODO verify mime-type of file and if file is correct
-    }
-
     /**
      * @param $level the level input of the user
      * @return bool  true if the the level doesn't exist already, false if it already exist.
@@ -112,7 +101,7 @@ class ImportCSVController{
             if($dbLevel->label()== $level_name)
                 return false;
 
-            if($dbLevel->level_num()== $num_level)
+            if($dbLevel->num_level()== $num_level)
                 return false;
         }
         return true;
@@ -127,6 +116,6 @@ class ImportCSVController{
             return 'NULL';
         else
             return trim($queryValue);
-    }//TODO strpos pour faire une recherche sur une str,
+    }
 }
 ?>

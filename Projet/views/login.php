@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="css/signin.css" />
 
 <div class="wrapper">
-    <h2>Login</h2>
-    <p>Bienvenue sur la page de login.</p>
+    <h2>Page d'identification</h2>
+    <p>Bienvenue sur la page d'identification.</p>
 
     <div id="notification"><?php echo $notification; ?></div>
     <div class="form-signin" >

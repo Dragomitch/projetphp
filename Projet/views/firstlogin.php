@@ -7,7 +7,7 @@
 
     <div id="notification"><?php echo $notification; ?></div>
     <div class="form-signin" >
-        <form action="?action=first" method="post" class="form-control">
+        <form action="index.php?action=first" method="post" class="form-control">
             <p>Login : <input type="text" name="login" />
                 <br>Mot de passe : <input type="password" name="password" />
                 <br>Confirmer Mot de passe : <input type="password" name="motdepasseconfirme"/></p>
@@ -15,3 +15,4 @@
         </form>
     </div>
 </div><!-- #contenu -->
+

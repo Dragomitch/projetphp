@@ -1,10 +1,10 @@
 
 
 
-	<div id="body_wrapper">
-	<div id="container">
+<div id="body_wrapper">
+    <div id="container">
         <!-- Header -->
-        <?php require_once(PATH_VIEWS.'headerstudent.php'); ?>	
+        <?php require_once(PATH_VIEWS.'headerstudents.php'); ?>
 
 
         <ul>
@@ -12,5 +12,5 @@
                 <li><a href="index.php?action=exercices&level=<?php echo $tablevel[$i]->level()?>&exercise=1"><?php echo $tablevel[$i]->label()?></a></li>
             <?php }?>
         </ul>
-        </div>
-        </div>
+    </div>
+</div>

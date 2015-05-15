@@ -8,23 +8,23 @@ class StudentListController{
             header("Location: index.php?action=login");
             die();
         }elseif($_SESSION['type'] != 'teacher') {
-            header ( "Location: index.php?action=homeStudent" ); // redirection HTTP vers l'action login
+            header ( "Location: index.php?action=homeStudent" ); 
             die ();
         }
 
-        $tabstudents;
+        #get all the student
         $tabstudents=Db::getInstance()->select_students();
-        
+
+        # Select all the level
         $tablevel=Db::getInstance()->select_level();
-		
-		
-		
-        # Selection of all the student to display
-       
 
 
-        
-        
+
+
+
+
+
+
 
         require_once(PATH_VIEWS . 'studentlist.php');
     }
