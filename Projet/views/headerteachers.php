@@ -1,3 +1,4 @@
+
 <nav id="nav">
     <ul>
         <li class="current_page_item"><a href="index.php">Accueil</a></li>
@@ -9,4 +10,4 @@
     </ul>
 </nav>
 
-<body>
+

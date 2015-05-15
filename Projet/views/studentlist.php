@@ -28,7 +28,7 @@
                 <?php for ($i=0;$i<count($tabstudents);$i++) { ?>
                     <tr>
                         <td><span class="html"><?php echo $tabstudents[$i]->matricule() ?></span></td>
-                        <td><a href="index.php?action=studentEx&matricule=<?php echo $tabstudents[$i]->matricule() ?>"><span class="html"><?php echo $tabstudents[$i]->first_name()?></span></a></td>
+                        <td><a href="index.php?action=studentEx&amp;matricule=<?php echo $tabstudents[$i]->matricule() ?>"><span class="html"><?php echo $tabstudents[$i]->first_name()?></span></a></td>
                         <td><span class="html"><?php echo $tabstudents[$i]->last_name()?></span></td>
 	
                         <?php for($k=0;$k<count($tablevel);$k++){ ?>
@@ -37,7 +37,7 @@
                         <?php if(count($tabexercise)>1) { ?>
                          <!-- get all the answer of the student for the level at $k and the student at $i -->
                         <?php $tab_answer_stud=Db::getInstance()->select_all_answer_student($tabstudents[$i]->matricule(), $tablevel[$k]->level());?>
-                        <td><span class="html"><progress id="progress" value="<?php echo (count($tab_answer_stud)/count($tabexercise))*100;?>" max="<?php echo 100 ?>"></progress>  <?php echo round((count($tab_answer_stud)/count($tabexercise))*100,1)."%"?></span>
+                        <td><span class="html"><progress class="progress" value="<?php echo (count($tab_answer_stud)/count($tabexercise))*100;?>" max="<?php echo 100 ?>"></progress>  <?php echo round((count($tab_answer_stud)/count($tabexercise))*100,1)."%"?></span>
                             <?php }} ?>
                     </tr>
                 <?php }?>

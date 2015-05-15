@@ -103,13 +103,13 @@ footer #copyright {
 	color: purple;
 }
 
-#tableBalises th{
+.tableBalises th{
 	border-style: solid;
 	border-width: thin;
 	border-collapse: collapse;
 	background-color: #DCDCDC;
 }
-#tableBalises td{
+.tableBalises td{
 	border-style: solid;
 	border-width: thin;
 	border-collapse: collapse;
