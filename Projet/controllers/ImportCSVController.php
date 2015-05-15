@@ -108,6 +108,7 @@ class ImportCSVController{
 
     }
 
+
     /**
      * @param $level the level input of the user
      * @return bool  true if the the level doesn't exist already, false if it already exist.
@@ -126,6 +127,7 @@ class ImportCSVController{
         return true;
     }
 
+
     /**
      * @param $queryValue A query field
      * @return string NULL if $queryValue is empty, his value else.
@@ -138,5 +140,4 @@ class ImportCSVController{
     }
 }
 
-//TODO sécuriser les champs entrés
 ?>

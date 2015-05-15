@@ -26,10 +26,10 @@ class FirstLoginController{
             die();
 
         }else{
-            $notification='Authentification non réussi !';
+            $notification='Authentification non réussie !';
         }
 
         require_once(PATH_VIEWS . 'firstlogin.php');
 
-    }//todo essayer de faire ca plus proprement?
+    }
 }
