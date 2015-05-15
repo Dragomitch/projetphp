@@ -12,18 +12,9 @@ class StudentListController{
             die ();
         }
 
-        $tabstudents=Db::getInstance()->select_students();
+        $tabstudents=Db::getInstance()->select_students();#get all the students
 
-        $tablevel=Db::getInstance()->select_level();
-
-
-
-        # Selection of all the student to display
-
-
-
-
-
+        $tablevel=Db::getInstance()->select_levels();# Select all the levels
 
         require_once(PATH_VIEWS . 'studentlist.php');
     }

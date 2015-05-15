@@ -2,6 +2,7 @@
 class LoginController {
     public function __construct() {
     }
+
     public function run() {
 
         if (! empty ( $_SESSION ['authentifie'] )) {
@@ -16,13 +17,14 @@ class LoginController {
             }
         }
 
-
         $notification = '';
 
-        if (empty ( $_POST )) {
+        if (empty ( $_POST )) {#if no connexion is attempted
 
             $notification = 'Authentifiez-vous';
-        } elseif (Db::getInstance ()->valid_student ( (htmlentities ( $_POST ['login'] )), (htmlentities ( $_POST ['password'] )) )) {
+
+        }elseif (Db::getInstance ()->valid_student ( (htmlentities ( $_POST ['login'] )), (htmlentities ( $_POST ['password'] )) )) {
+            #If the connexion attempt is a legit student connexion
 
             $_SESSION ['authentifie'] = 'autorise';
             $_SESSION ['login'] = $_POST ['login'];
@@ -31,7 +33,9 @@ class LoginController {
             header ( "Location: index.php?action=homeStudent" );
             die ();
         }
+
         elseif ( Db::getInstance ()->valid_teacher ( (htmlentities ( $_POST ['login'] )), (htmlentities ( $_POST ['password'] )) )) {
+            #If the connexion attempt is a legit teacher connexion
 
             $_SESSION ['authentifie'] = 'autorise';
             $_SESSION ['login'] = $_POST ['login'];
@@ -40,7 +44,6 @@ class LoginController {
             header ( "Location: index.php?action=homeTeacher" );
             die ();
         }
-
 
         require_once (PATH_VIEWS . 'login.php');
     }

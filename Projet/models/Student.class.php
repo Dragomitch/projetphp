@@ -1,6 +1,7 @@
 <?php
 class Student{
-	private $_matricule;
+
+    private $_matricule;
 	private $_first_name;
 	private $_last_name;
 	private $_password;
@@ -8,6 +9,7 @@ class Student{
 	
 	
 	public function __construct($matricule,$first_name,$last_name,$password){
+
 		$this->_matricule = $matricule;
 		$this->_first_name = $first_name;
 		$this->_last_name =$last_name;
@@ -15,20 +17,26 @@ class Student{
 		#$this->_last_connexion = $time_start;
 	}
 	
+
 	public function matricule(){
 		return $this->_matricule;		
 	}	
 		
+
 	public function first_name(){
 		return $this->_first_name;
 	}
+
+
 	public function last_name(){
 		return $this->_last_name;
 	}
 	
+
 	public function password(){
 		return $this->_password;
 	}
+
 // 	public function last_connexion(){
 // 		return $this->_last_connexion;
 // 	}

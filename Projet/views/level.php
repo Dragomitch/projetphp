@@ -9,7 +9,7 @@
 
         <ul>
             <?php for ($i=0;$i<count($tablevel);$i++) { ?>
-                <li><a href="index.php?action=exercices&level=<?php echo $tablevel[$i]->level()?>&exercise=1"><?php echo $tablevel[$i]->label()?></a></li>
+                <li><a href="index.php?action=exercices&amp;level=<?php echo $tablevel[$i]->level()?>&amp;exercise=1"><?php echo $tablevel[$i]->label()?></a></li>
             <?php }?>
         </ul>
     </div>

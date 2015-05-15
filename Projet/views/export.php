@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/modele01.css" />
+
 <div id="body_wrapper">
     <div id="container">
     <!-- Nav -->
@@ -25,7 +25,7 @@
                 <?php } ?>
 
 
-            <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; }?></p>
+            <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; ?></p><?php }?>
         </div>
     </div>
 </div>

@@ -6,16 +6,16 @@ class HomeTeacherController{
     }
 
     public function run(){
+
         if ( empty ( $_SESSION ['authentifie'] ) ){
             header("Location: index.php?action=login");
             die();
         }elseif($_SESSION['type'] != 'teacher') {
-            header ( "Location: index.php?action=homeStudent" ); // redirection HTTP vers l'action login
+            header ( "Location: index.php?action=homeStudent" );
             die ();
         }
-        # Un contrôleur se termine en écrivant une vue
+
         require_once(PATH_VIEWS . 'hometeacher.php');
     }
-
 }
 ?>

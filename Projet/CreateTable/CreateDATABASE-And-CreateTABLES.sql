@@ -57,8 +57,6 @@ CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 
 )ENGINE=InnoDB;
 
--- Vérifier la relation qu'il faut entre students_answer et exercises.(	et donc si number doit également être FK)
-
 CREATE DATABASE IF NOT EXISTS bd1 DEFAULT COLLATE = utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS bd1.albums
@@ -105,7 +103,8 @@ CREATE TABLE IF NOT EXISTS bd3.editeurs
 (num  integer  primary key,
  nom        varchar(20) not NULL,
  adresse      varchar(30) ,
- pays       char(1) not NULL)ENGINE=InnoDB;
+ pays       char(1) not NULL
+)ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS bd3.albums
 (isbn     char(14)  PRIMARY KEY,
@@ -124,7 +123,8 @@ CREATE TABLE IF NOT EXISTS bd3.auteurs
 (num  integer  primary key,
 nom varchar(20),
 adresse varchar(30) ,
-e_mail  varchar(30) not NULL)ENGINE=InnoDB;
+e_mail  varchar(30) not NULL
+)ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS bd3.participations
 (isbn char(14) not NULL,

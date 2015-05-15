@@ -1,16 +1,19 @@
 <?php
 class Student{
-	private $_login;
+
+    private $_login;
 	private $_first_name;
 	private $_last_name;
 	private $_password;
 
 
 	public function __construct($login,$first_name,$last_name,$password){
-		$this->_login = $login;
+
+        $this->_login = $login;
 		$this->_first_name = $first_name;
 		$this->_last_name =$last_name;
 		$this->_password = $password;
+
 	}
 
 	public function login(){
@@ -27,6 +30,5 @@ class Student{
 	public function password(){
 		return $this->_password;
 	}
-	
 }
 ?>

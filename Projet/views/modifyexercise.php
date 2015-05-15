@@ -59,6 +59,8 @@
                 </form>
 
             <?php } ?>
+            <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; ?></p><?php }?>
+
         </div>
 
     </div>

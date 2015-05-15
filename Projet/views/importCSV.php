@@ -26,6 +26,6 @@
             </p>
             <input type="submit" value="Upload file"><br>
         </form>
-        <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; }?></p>
+        <?php if(!empty($notification)){?> <p id="notification"><?php echo $notification; ?></p><?php }?>
     </div>
 </div>

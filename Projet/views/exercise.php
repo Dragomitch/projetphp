@@ -10,7 +10,7 @@
 
         <div id="form3">
             <form
-                action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise()?>"
+                action="index.php?action=exercices&amp;level=<?php echo $tabexercises[$num_exercise]->num_level();?>&amp;exercise=<?php echo $tabexercises[$num_exercise]->num_exercise()?>"
                 id="raccourci" method="post">
                 <p>
                     <input type="hidden" name="module" /> <input type="text"
@@ -19,22 +19,22 @@
                 </p>
             </form>
             <form
-                action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise()?>"
+                action="index.php?action=exercices&amp;level=<?php echo $tabexercises[$num_exercise]->num_level();?>&amp;exercise=<?php echo $tabexercises[$num_exercise]->num_exercise()?>"
                 method="post" id="precedent">
                 <p>
                     <input type="hidden" name="module" value="niv" /> <input
                         type="hidden" name="nr_question_precedent"
-                        value="<?php echo $tabexercises[$i]->num_exercise()?>" /> <input
+                        value="<?php echo $tabexercises[$num_exercise]->num_exercise()?>" /> <input
                         type="submit" value="&lt;" />
                 </p>
             </form>
             <form
-                action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise()?>"
+                action="index.php?action=exercices&amp;level=<?php echo $tabexercises[$num_exercise]->num_level();?>&amp;exercise=<?php echo $tabexercises[$num_exercise]->num_exercise()?>"
                 method="post" id="suivant">
                 <p>
                     <input type="hidden" name="module" value="niveau1" /> <input
                         type="hidden" name="nr_question_suivant"
-                        value="<?php echo $tabexercises[$i]->num_exercise()?>" /> <input
+                        value="<?php echo $tabexercises[$num_exercise]->num_exercise()?>" /> <input
                         type="submit" value="&gt;" />
                 </p>
             </form>
@@ -45,11 +45,11 @@
                 <br><span class="html">Niveau <?php echo $num_level[0]->num_level(); ?></span>
             </h2>
             <h2>
-                <span class="html">Question <?php echo $tabexercises[$i]->num_exercise(); ?></span>
+                <span class="html">Question <?php echo $tabexercises[$num_exercise]->num_exercise(); ?></span>
             </h2>
 
             <p>
-                <span class="html"><?php echo $tabexercises[$i]->statement(); ?></span>
+                <span class="html"><?php echo $tabexercises[$num_exercise]->statement(); ?></span>
             </p>
 
             <a id="niveau" href="views/css/image/niveau1.jpg"><img src="views/css/image/niveau1.jpg" alt="DSD niveau1" title="Cliquez pour agrandir" /></a>
@@ -63,15 +63,12 @@
                     <span class="html">Votre reponse : <?php echo $last_answer[0]->answer_query();?> </span>
                 </p>
             <?php } ?>
-            <!-- 				<a id="niveau" href="images/niveau1.jpg"><img -->
-            <!-- 					src="images/tn_niveau1.jpg" alt="DSD niveau1" -->
-            <!-- 					title="Cliquez pour agrandir" /></a> -->
 
             <form
-                action="index.php?action=exercices&level=<?php echo $tabexercises[$i]->num_level();?>&exercise=<?php echo $tabexercises[$i]->num_exercise() ?>"
+                action="index.php?action=exercices&amp;level=<?php echo $tabexercises[$num_exercise]->num_level();?>&amp;exercise=<?php echo $tabexercises[$num_exercise]->num_exercise() ?>"
                 method="post">
                 <input type="hidden" name="number_ex"
-                       value="<?php echo $tabexercises[$i]->number()?>">
+                       value="<?php echo $tabexercises[$num_exercise]->number()?>">
                 <p>
                     <textarea rows="6" cols="65" name="answer">SELECT </textarea>
                 </p>
@@ -80,7 +77,7 @@
                 </p>
             </form>
         </div>
-
+			<p><?php echo $notification_valid;?></p>
 
         <?php if($show_answer ){?>
             <?php if(isset($notificationStud)){?>
@@ -93,36 +90,41 @@
 				<?php echo $tabanswer[0]->answer_query();?>
 				</span>
                 </p>
-                <table id="tableBalises">
+                <table class="tableBalises">
 
                 <tr>
+                <!-- loop : get the name of the columns -->
                 <?php for($j=0;$j<count($tabNamesColumns);$j++){?>
 
                     <?php echo '<th>' .$tabNamesColumns[$j]. '</th>'?>
 
                 <?php }?>
+				
+  				</tr>
 
-
-
-
+				 <!-- loop 1 : $k=index of the array where is save an other array where each index is a line of answer  -->
                 <?php for($k=0;$k<count($tabshowanswer);$k++){ ?>
 
 
 
 
                     <tr>
+                    <!-- $j is the index who give the names of the columns -->
+                    
                         <?php for($j=0;$j<count($tabNamesColumns);$j++){?>
                             <?php echo '<td>'.$tabshowanswer[$k][$tabNamesColumns[$j]].'</td>';?>
 
 
                         <?php }?>
                     </tr>
+                  
+
+			
                 <?php }?>
+                </table>
             <?php } ?>
 
-            </tr>
-
-			</table>
+            
 
 
 
@@ -131,7 +133,7 @@
 			<?php if(isset($notificationTeacher)){ ?>
                 <p id='notification'><?php echo $notificationTeacher; ?></p>
             <?php } else{ ?>
-                <table id="tableBalises">
+                <table class="tableBalises">
 
                     <tr>
                         <?php for($j=0;$j<count($tabNamesColumnsTeacher);$j++){?>
@@ -139,7 +141,7 @@
                             <?php echo '<th>' .$tabNamesColumnsTeacher[$j]. '</th>'?>
 
                         <?php }?>
-
+</tr>
 
 
 
@@ -157,12 +159,12 @@
                     </tr>
                     <?php }?>
 
-                    </tr>
+                    
 
                 </table>
             <?php }?>
-			</p>
+			
 			
         <?php }?>
     </div>
-
+</div>

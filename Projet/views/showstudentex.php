@@ -28,7 +28,9 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <!-- get all the answer of the student for the level at $i -->
                     <?php  $tabanswer=Db::getInstance()->select_all_answer_student($matricule, $tablevel[$i]->level()); ?>
+                    <!-- $k = index to get each exercises of the student -->
                     <?php for ($k=0;$k<count($tabanswer);$k++) { ?>
                     <tr>
                         <td><span class="html"><?php echo $tabanswer[$k]->exercise()?></span>

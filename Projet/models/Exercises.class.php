@@ -1,6 +1,7 @@
 <?php
 class Exercises{
-	private $_author;
+
+    private $_author;
 	
 	private $_last_modification;
 	private $_nb_lines;
@@ -12,43 +13,60 @@ class Exercises{
 	private $_theme;
 	
 	public function __construct($author,$lastmodif,$nb_lines,$number,$num_exercise,$num_level,$query,$statement,$theme){
+
 		$this->_author =$author;
-		$this->_last_modification=$lastmodif;
+		$this->_last_modification= $lastmodif;
 		$this->_nb_lines=$nb_lines;
 		$this->_number=$number;
 		$this->_num_exercise=$num_exercise;
 		$this->_num_level=$num_level;
 		$this->_query=$query;
 		$this->_statement=$statement;
-		$this->_theme=$theme;	
+		$this->_theme=$theme;
+
 	}
 
 	public function author(){
 		return $this->_author;
 	}
 	
-	public function last_modification(){
+
+    public function last_modification(){
 		return $this->_last_modification;
 	}
-	public function nb_lines(){
+
+
+    public function nb_lines(){
 		return $this->_nb_lines;
 	}
-	public function number(){
+
+
+    public function number(){
 		return $this->_number;
 	}
-	public function num_exercise(){
+
+
+    public function num_exercise(){
 		return $this->_num_exercise;
 	}
-	public function num_level(){
+
+
+    public function num_level(){
 		return $this->_num_level;
 	}
-	public function query(){
+
+
+    public function query(){
 		return $this->_query;
 	}
-	public function statement(){
+
+
+    public function statement(){
 		return $this->_statement;
 	}
-	public function theme(){
+
+
+    public function theme(){
 		return $this->_theme;
 	}
 }
