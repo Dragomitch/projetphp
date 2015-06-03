@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS sitephp.exercises(
 
 CREATE TABLE IF NOT EXISTS sitephp.students_answers(
 	number				INTEGER			auto_increment PRIMARY KEY,
-	answer_query		VARCHAR(1000)	NULL,
+	answer_query		VARCHAR(1000)	NOT NULL,
 	exercise 			INTEGER			NOT NULL,
 	student 			INTEGER			NOT NULL,
 

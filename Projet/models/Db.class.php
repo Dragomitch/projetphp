@@ -168,7 +168,7 @@ class Db
 
         if ($result->rowcount()!=0) {
             while ($row = $result->fetch()) {
-                $tableau[] = new Student($row->matricule,$row->first_name,$row->last_name,$row->password);
+                $tableau[] = new Student($row->matricule,$row->first_name,$row->last_name,$row->password, $row->last_connection);
             }
         }
 
@@ -319,9 +319,9 @@ class Db
     }
 
 
-    public function update_student_last_co($matricule,$last_co){
+    public function update_student_last_co($matricule){
 
-        $query='UPDATE `sitephp`.`students` SET `last_connection`= '.$this->_db->quote($last_co).' WHERE `matricule`='.$this->_db->quote($matricule).'';
+        $query='UPDATE students SET last_connection= NOW() WHERE matricule='.$matricule;
         $this->_db->prepare($query)->execute();
 
     }
@@ -329,16 +329,16 @@ class Db
 
     public function is_a_good_query($query){
 
-        $not_allowed_words=['delete','update','create','alter','insert','truncate','drop'];
+        $not_allowed_words=['delete','update','create','ater','insert','truncate','drop'];
         $allowed=['bd1','bd2','bd3'];
 
         for($i=0;$i<count($not_allowed_words);$i++){
-            if(strpos($query, $not_allowed_words[$i])!== FALSE)
+            if(strpos(strtolower($query) , $not_allowed_words[$i])!== FALSE)
                 return false;
         }
 
         for ($i=0;$i<count($allowed);$i++){
-            if(strpos($query, $allowed[$i])!==FALSE)
+            if(strpos(strtolower($query), $allowed[$i])!==FALSE)
                 return true;
         }
 

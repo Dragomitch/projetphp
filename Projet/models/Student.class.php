@@ -8,13 +8,13 @@ class Student{
 	private $_last_connexion;
 	
 	
-	public function __construct($matricule,$first_name,$last_name,$password){
+	public function __construct($matricule,$first_name,$last_name,$password, $time= null){
 
 		$this->_matricule = $matricule;
 		$this->_first_name = $first_name;
 		$this->_last_name =$last_name;
 		$this->_password = $password;
-		#$this->_last_connexion = $time_start;
+		$this->_last_connexion = $time;
 	}
 	
 
@@ -37,8 +37,8 @@ class Student{
 		return $this->_password;
 	}
 
-// 	public function last_connexion(){
-// 		return $this->_last_connexion;
-// 	}
+ 	public function last_connexion(){
+ 		return $this->_last_connexion;
+ 	}
 }
 ?>
